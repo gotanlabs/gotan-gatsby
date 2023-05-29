@@ -71,7 +71,6 @@
     order: 1;
     border: none;
     padding: .5rem;
-    border: none;
     font-size: 1.8rem;
     color: $bg-secondary;
     &:focus{
@@ -80,6 +79,7 @@
   }
   .navbar-collapse{
     order: 2;
+    justify-content: center;
   }
   .navbar-nav {
 

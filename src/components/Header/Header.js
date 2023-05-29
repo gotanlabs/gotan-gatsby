@@ -50,7 +50,7 @@ const Header = () => {
         <div className={`moon ${theme === "dark" ? "" : "moon-animate"}`}>
           <FontAwesomeIcon code="FaMoon" />
         </div>
-        <div className={`sun ${theme === "dark" ? "sun-animate" : ""}`}>
+      <div className={`sun ${theme === "dark" ? "sun-animate" : ""}`}>
           <MaterialIcon code="MdWbSunny" />
         </div>
       </button>

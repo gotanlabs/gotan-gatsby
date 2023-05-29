@@ -44,7 +44,7 @@ const Menu = ({ links }) => {
         <MaterialIcon code="MdMenu" />
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">{itemsMenu}</Nav>
+        <Nav>{itemsMenu}</Nav>
       </Navbar.Collapse>
     </>
   );

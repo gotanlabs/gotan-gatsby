@@ -15,8 +15,8 @@ const Home = () => {
     {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></> } 
   <TextExample></TextExample>
 </div> : <div className="d-flex justify-content-center">
-  <h2>Home in Sanity has no content</h2>
-</div> };
+  {/* <h2>Home in Sanity has no content</h2> */}
+</div> }
 </>
 
 };
