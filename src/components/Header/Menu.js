@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { MaterialIcon, Icon } from "..";
+import { Icon } from "..";
 
 const Menu = ({ links }) => {
   const itemsMenu = links.map((link) =>
@@ -40,9 +40,6 @@ const Menu = ({ links }) => {
   );
   return (
     <>
-      <Navbar.Toggle aria-controls="basic-navbar-nav">
-        <MaterialIcon code="MdMenu" />
-      </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav>{itemsMenu}</Nav>
       </Navbar.Collapse>
