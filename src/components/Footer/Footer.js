@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     data !== null && (
       <footer className="footer px-2">
-       <div className='line container'></div>
+       <div className='line container '></div>
         <div className="container py-4 d-flex flex-wrap test" >
           <div>
               { (
@@ -67,23 +67,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* <div className="footer__down">
-          <div className="container d-flex justify-content-end align-items-center py-4">
-            {theme === "dark" ? (
-             data.logo.imageDark !== null ?  <SanityImage
-                {...data.logo.imageDark}
-                alt={`${data.logo.image.alt}`}
-                className="header__logo"
-              /> : <></>
-            ) : (
-              data.logo.image.image !== null ?  <SanityImage
-                {...data.logo.image.image}
-                alt={`${data.logo.image.alt}`}
-                className="header__logo"
-              /> : <></>
-            )}
-          </div>
-        </div> */}
       </footer>
     )
   );
