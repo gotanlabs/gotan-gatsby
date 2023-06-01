@@ -1,6 +1,6 @@
 import React from "react";
 
-const FooterLinkBlock = ({ links, title }) => {
+const FooterLinkArray = ({ links}) => {
   const linksList = links.map((link) => {
     const url = link?.url;
     const linkTitle = link?.text;
@@ -15,10 +15,9 @@ const FooterLinkBlock = ({ links, title }) => {
 
   return (
     <div className="py-1">
-      <h5 className="title-small">{title}</h5>
       <ul>{linksList}</ul>
     </div>
   );
 };
 
-export default FooterLinkBlock;
+export default FooterLinkArray;
