@@ -8,7 +8,6 @@ import FooterLinkArray from "./FooterLinkArray";
 
 const Footer = () => {
   const data = useFooter().sanityFooter;
- 
 
   return (
     data !== null && (
@@ -52,8 +51,8 @@ const Footer = () => {
                   className="py-2"
                 >
                   <SanityImage
-                    {...data.qrCode.image.image}
-                    alt={`${data.qrCode.image.alt}`}
+                    {...data.qrCode.image}
+                    alt={`${data.qrCode.alt}`}
                     className="qrCode"
                   />
                 </a>
