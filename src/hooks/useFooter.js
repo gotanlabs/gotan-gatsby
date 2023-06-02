@@ -74,6 +74,14 @@ const useFooter = () => {
             _key
           }
         }
+        linkArray {
+          _key
+          links {
+            url
+            text
+            _key
+          }
+        }
         id
       }
     }

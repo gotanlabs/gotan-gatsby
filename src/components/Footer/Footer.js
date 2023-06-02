@@ -4,6 +4,7 @@ import "./Footer.scss";
 import useFooter from "../../hooks/useFooter";
 import FooterLinkBlock from "./FooterLinkBlock";
 import SocialMediaBlock from "./SocialMediaBlock";
+import FooterLinkArray from "./FooterLinkArray";
 
 const Footer = () => {
   const data = useFooter().sanityFooter;
@@ -11,18 +12,38 @@ const Footer = () => {
   return (
     data !== null && (
       <footer className="footer px-2">
-        <div className="container py-4 d-flex flex-wrap">
+       <div className='line container '></div>
+        <div className="container py-4 d-flex flex-wrap test" >
+          <div>
+              { (
+              data.logo.image !== null ?  <SanityImage
+                {...data.logo.image}
+                alt={`${data.logo.alt}`}
+                className="footer__logo"
+              /> : <></>
+            )}
+            {data.linkArray.length !== 0 &&
+            data.linkArray.map((block) => (
+              <div className="linkArray"> 
+              <FooterLinkArray 
+                key={block._key}
+                links={block.links}
+              />
+              </div>
+            ))}
+            </div>
+              <div className="linkBlock">
           {data.linkBlock.length !== 0 &&
             data.linkBlock.map((block) => (
-              <FooterLinkBlock
+              <div className="blockChild"> 
+              <FooterLinkBlock 
                 key={block._key}
                 links={block.links}
                 title={block.title}
               />
+              </div>
             ))}
-
-          <div className="col-12 col-md-4 flex-md-grow-1 ">
-            <div className="contactBlock">
+            <div className=""  >
               {data.qrCode && (
                 <a
                   href={data.qrCode.url}
