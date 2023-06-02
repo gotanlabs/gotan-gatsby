@@ -16,15 +16,15 @@ const Footer = () => {
         <div className="container py-4 d-flex flex-wrap test" >
           <div>
               { (
-              data.logo.image.image !== null ?  <SanityImage
-                {...data.logo.image.image}
-                alt={`${data.logo.image.alt}`}
+              data.logo.image !== null ?  <SanityImage
+                {...data.logo.image}
+                alt={`${data.logo.alt}`}
                 className="footer__logo"
               /> : <></>
             )}
             {data.linkArray.length !== 0 &&
             data.linkArray.map((block) => (
-              <div > 
+              <div className="linkArray"> 
               <FooterLinkArray 
                 key={block._key}
                 links={block.links}
@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="linkBlock">
           {data.linkBlock.length !== 0 &&
             data.linkBlock.map((block) => (
-              <div className=""> 
+              <div className="blockChild"> 
               <FooterLinkBlock 
                 key={block._key}
                 links={block.links}
