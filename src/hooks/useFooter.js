@@ -44,49 +44,38 @@ const useFooter = () => {
           }
         }
         logo {
-          imageDark {
+          _key
+          _type
+          alt
+          image {
             hotspot {
-              y
-              x
-              width
               height
+              width
+              x
+              y
             }
             crop {
-              top
-              right
-              left
               bottom
+              left
+              right
+              top
             }
             asset {
               _id
-            }
-          }
-          image {
-            alt
-            _key
-            image {
-              _key
-              asset {
-                _id
-              }
-              crop {
-                top
-                right
-                left
-                bottom
-              }
-              hotspot {
-                y
-                x
-                width
-                height
-              }
             }
           }
         }
         linkBlock {
           _key
           title
+          links {
+            url
+            text
+            _key
+          }
+        }
+        linkArray {
+          _key
           links {
             url
             text

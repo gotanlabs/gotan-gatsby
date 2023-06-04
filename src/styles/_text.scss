@@ -1,9 +1,23 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
-$primary-font: "Ubuntu", sans-serif;
+/* Gotan fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&family=Roboto:wght@300&display=swap');
+/*
+font-family: 'Figtree', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+/*
+font-family: 'Space Grotesk', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/*
+font-family: 'Inter', sans-serif;
+*/
+
+$primary-font: 'Figtree', sans-serif;
 $secondary-font: "Roboto", sans-serif;
 
 h1,
@@ -25,12 +39,12 @@ p {
   letter-spacing: 0.5px;
 }
 .body-medium {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.25px;
 }
 .body-small {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.4px;
 }
