@@ -2,6 +2,7 @@ import React from "react";
 import { TextBlock, TextImage, TextImageCarousel } from "../";
 
 const CustomSection = ({ sections }) => {
+  console.log(sections);
   const sectionResult = sections.map((section) => {
     {
       if (
