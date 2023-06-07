@@ -13,13 +13,13 @@ const DualAsymmetric = ({
 }) => {
     console.log("data componente", title)
   return (
-    <div className={`DualAsymmetric ${imageSide}`}>
-      <div className="emptyLeft" style={{ backgroundColor: "blue" }}>
+    <div className={`DualAsymmetric`}>
+      <div className="titleContainer col-6">
         <h4>{title}</h4>
       </div>
       {image && (
         <div
-          className={`ImageContainer ${imageSide}`}
+          className={`ImageContainer`}
           style={{ backgroundColor: "violet" }}
         >
           <SanityImage {...image.image} alt={image.alt} />

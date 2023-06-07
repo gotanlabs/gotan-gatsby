@@ -3,8 +3,13 @@
 @import "../../styles/global";
 
 .DualAsymmetric {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
+
+  .titleContainer{
+    background-color:#CCFF00 ;
+  }
+
 }
 
 .DualAsymmetric .ImageContainer {

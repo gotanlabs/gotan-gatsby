@@ -11,7 +11,7 @@ const Home = () => {
   console.log("HOME DUAL", data.dualAsymmetric)
   return <>
     <Seo title='Home' description='' keywords='' />
-    {data !== null ? <div className="container">
+    {data !== null ? <div>
      <DualAsymmetric data={data.dualAsymmetric}/>
       {data.banner !== null ? <Banner banner={data.banner} /> : <></>}
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}

@@ -1,3 +1,10 @@
+// breakpoints
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$xxl-breakpoint: 1400px;
+
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
@@ -30,80 +37,34 @@ h6 {
 }
 
 p {
-  font-family: $secondary-font;
+  font-family: $primary-font;
+  // font-family: $secondary-font;
+  font-size: 18px;
 }
 
-.body-large {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+.body-large>* {
+  font-size: 20px !important;
+  line-height: 31px;
 }
-.body-medium {
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.25px;
-}
-.body-small {
+
+small {
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.4px;
 }
 
-.label-large {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.1px;
-}
-.label-medium {
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-}
-.label-small {
-  font-size: 10px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
+.label-small>* {
+  font-size: 12px;
 }
 
-.title-large {
-  font-size: 22px;
-  line-height: 28px;
-}
-.title-medium {
-  font-size: 16px;
-  line-height: 24px;
-}
-.title-small {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.headline-large {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 300;
-}
-.headline-medium {
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 300;
-}
-.headline-small {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 300;
-}
-
-.display-large {
-  font-size: 57px;
-  line-height: 64px;
-  letter-spacing: -0.25px;
-}
-.display-medium {
-  font-size: 45px;
-  line-height: 52px;
-}
-.display-small {
-  font-size: 36px;
-  line-height: 44px;
+@media (min-width: $md-breakpoint) {
+  small {
+    font-size: 16px;
+  }
+  
+  .body-large>* {
+    font-size: 24px !important;
+  }
+  .label-small>* {
+    font-size: 14px;
+  }
 }
