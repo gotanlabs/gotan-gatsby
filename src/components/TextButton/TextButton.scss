@@ -1,0 +1,64 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+/* Featured words */
+code {
+    font-size: 20px !important;
+    color: #000 !important;
+    font-family: $primary-font !important;
+    word-wrap: break-word;
+    border: solid 2px #C6FF39 !important;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: 400;
+
+    &:hover {
+        font-size: 20px !important;
+        color: #000 !important;
+        word-wrap: break-word;
+        background-color: #C6FF39;
+        border: solid 2px #C6FF39 !important;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: 400;
+    }
+}
+/* End featured words */
+
+.textBlock {
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+
+    h3.textBlock__title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    :nth-child(2) {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: $md-breakpoint) {
+    .textBlock {
+        padding: 12px;
+        font-size: 18px;
+
+        h3.textBlock__title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+
+    code {
+        font-size: 18px !important;
+    }
+}

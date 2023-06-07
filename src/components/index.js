@@ -12,7 +12,7 @@ import TextBlock from "./TextBlock/TextBlock"
 import TextImage from "./TextImage/TextImage"
 import CustomSection from "./CustomSection/CustomSection"
 import { Seo } from "./seo"
-
+import TextButton from "./TextButton/TextButton"
 
 
 export {
@@ -29,5 +29,6 @@ export {
     TextBlock,
     TextImage,
     CustomSection,
-    Seo
+    Seo,
+    TextButton
 }
