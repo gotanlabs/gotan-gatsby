@@ -1,17 +1,21 @@
 @import "../../styles/colors";
 @import "../../styles/text";
 @import "../../styles/global";
-
 .DualAsymmetric {
   display: flex;
   grid-template-columns: 1fr;
-
   .titleContainer{
     background-color:#CCFF00 ;
+    .ImageContainer {
+      padding: 3rem 4rem;
+      img {
+        max-width: 192px !important;
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
-
 }
-
 .DualAsymmetric .ImageContainer {
   padding: 3rem 4rem;
   img {
@@ -20,18 +24,14 @@
     margin: 0 auto;
   }
 }
-
 .DualAsymmetric .TextContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1.5rem 1.5rem 3rem 1.5rem;
 }
-
 .DualAsymmetric .Title {
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
   line-height: normal;
 }
-
-
