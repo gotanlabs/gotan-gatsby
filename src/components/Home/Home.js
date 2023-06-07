@@ -1,7 +1,8 @@
 import React from "react";
 import useHome from "../../hooks/useHome";
 import Banner from "../Banner/Banner";
-import { Seo, CustomSection } from "../";
+import {Seo, CustomSection} from "../";
+import BannerSimple from "../BannerSimple/BannerSimple";
 import Logos from "../Logos/Logos";
 
 
@@ -12,6 +13,7 @@ const Home = () => {
     {data !== null ? <div>
       {data.banner !== null ? <Banner banner={data.banner} /> : <></>}
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}
+      <BannerSimple data={data.bannerSimple}/>
       <Logos logos={data.Logos} />
     </div> : <div className="d-flex justify-content-center">
      

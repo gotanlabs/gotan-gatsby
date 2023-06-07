@@ -1,0 +1,142 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.title-bannerSimple {
+  display: flex;
+  flex-direction: row;
+
+  .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+}
+
+.button-bannerSimple {
+  .custom-link {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    border: black solid 2px;
+    background-color: white;
+    color: black !important;
+    padding: 10px;
+
+    .icon {
+      border-left: solid 1px black;
+      margin-left: 5px;
+    }
+  }
+}
+
+.bannerSimple-container {
+  position: relative;
+}
+
+.image-bannerSimple {
+  position: relative;
+  width: 100%;
+  height: 355px;
+  border-radius: 16px;
+  border: solid 1px black;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bannerSimple-text-button {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+/* Media query Banner simple mobile */
+@media (max-width: $sm-breakpoint) {
+  .bannerSimple-text-button {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
+  }
+
+  .title-bannerSimple {
+    padding-bottom: 20px;
+  }
+
+  .title-bannerSimple .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 80%;
+  }
+
+  .custom-link p {
+    font-family: Figtree, sans-serif;
+    white-space: nowrap;
+    padding: 0px 15px;
+  }
+
+  .button-bannerSimple .custom-link .icon {
+    border-left: solid 1px black;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+
+}
+/* End media query Banner simple mobile */
+
+/* Media query Banner simple tablet */
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+  .bannerSimple-text-button {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
+  }
+
+  .title-bannerSimple {
+    padding-bottom: 20px;
+  }
+
+  .title-bannerSimple .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 100%;
+  }
+
+  .custom-link p {
+    font-family: Figtree, sans-serif;
+    white-space: nowrap;
+    padding: 0px 15px;
+  }
+
+  .button-bannerSimple .custom-link .icon {
+    border-left: solid 1px black;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+}
+/* End media query Banner simple tablet */
