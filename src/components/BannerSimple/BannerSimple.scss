@@ -1,41 +1,41 @@
-.carousel {
-    &-inner {
-      height: 350px;
-      .carousel-item {
-        
-        .img {
-          height: 350px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          position: relative;
-          &.overlay::after{
-            content: "";
-            background-color: black;
-            width: 100%;
-            height: 100%;
-            opacity: 0.5;
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
-          img {
-            min-height: 100%;
-            min-width: 100%;
-            object-fit: cover;
-          }
-        }
-        height: 350px;
-        
-        justify-content: center;
-        align-items: center;
-        overflow: hidden img {
-          min-height: 100%;
-          min-width: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-  }
+ .bannerSimple-text-button {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .title-bannerSimple {
+   display: flex;
+   flex-direction: row;
+
+   .icon {
+     font-size: 40px;
+     border: solid 2px black;
+     border-radius: 10px;
+     margin-left: 10px;
+   }
+ }
+ .button-bannerSimple {
+   .custom-link {
+     display: flex;
+     flex-direction: row-reverse;
+     border-radius: 10px;
+     border: black solid 2px;
+     background-color: white;
+     color: black !important;
+     padding: 15px;
+
+     .icon {
+       border-left: solid 1px black;
+       margin-left: 5px;
+     }
+   }
+ }
+
+ .image-bannerSimple {
+   width: 100%;
+   height: 355px;
+   border-radius: 16px;
+   border: solid 2px black;
+   margin: 0 auto;
+ }

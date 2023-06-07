@@ -7,14 +7,18 @@ const useHome = () => {
             titlePage
             descriptionPage
             bannerSimple {
-              title
               _key
-              button {
-                url
-                text
-              }
-              icon {
-                icon
+              iconButton {
+                _key
+                icon {
+                  icon
+                }
+                iconbutton {
+                  _key
+                  text
+                  url
+                }
+                title
               }
               image {
                 alt
@@ -29,11 +33,17 @@ const useHome = () => {
                     top
                   }
                   hotspot {
-                    width
                     height
+                    width
                     x
                     y
                   }
+                }
+              }
+              textIcon {
+                title
+                icon {
+                  icon
                 }
               }
             }

@@ -1,24 +1,33 @@
 import React from "react";
 import SanityImage from "gatsby-plugin-sanity-image";
 import "./BannerSimple.scss";
-import Container from 'react-bootstrap/Container';
 import Icon from "../Icons/Icon";
+import CustomLink from "../CustomLink/CustomLink";
 
 const BannerSimple = ({ data }) => {
   console.log(data)
   return (
-    <section>
+    <div className="bannerSimple-container">
       {(
         data.image.image !== null ? <SanityImage
           {...data.image.image}
           alt={`${data.image.alt}`}
-          className="caruosel"
+          className="image-bannerSimple"
         /> : <></>
       )}
-      <h1>{data.title}</h1>
-      {data.icon !== null && <Icon code={data.icon.icon}></Icon>}
-      <button></button>
-    </section>);
+      <div className="bannerSimple-text-button">
+        <div className="title-bannerSimple">
+        <h1>{data.textIcon.title}</h1>
+        {data.textIcon.icon !== null && <Icon className="icon-title-bannerSimple" code={data.textIcon.icon.icon}></Icon>}
+        </div>
+        <div className="button-bannerSimple">
+          <CustomLink
+            href={data.iconButton.iconbutton.url}
+            text={data.iconButton.iconbutton.text} 
+            icon={<Icon code={data.iconButton.icon.icon}></Icon>}/>
+        </div>
+      </div>
+    </div>);
 
 
 }
