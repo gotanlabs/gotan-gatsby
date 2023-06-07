@@ -10,6 +10,7 @@ import Home from "./Home/Home"
 import Banner from "./Banner/Banner"
 import TextBlock from "./TextBlock/TextBlock"
 import TextImage from "./TextImage/TextImage"
+import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
 import { Seo } from "./seo"
 import TextButton from "./TextButton/TextButton"
@@ -30,5 +31,6 @@ export {
     TextImage,
     CustomSection,
     Seo,
-    TextButton
+    TextButton,
+    TextImageCarousel,
 }

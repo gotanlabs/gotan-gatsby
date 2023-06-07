@@ -6,6 +6,46 @@ const useHome = () => {
         sanityHome {
             titlePage
             descriptionPage
+            bannerSimple {
+              _key
+              iconButton {
+                _key
+                icon {
+                  icon
+                }
+                iconbutton {
+                  text
+                  url
+                }
+                title
+              }
+              image {
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              textIcon {
+                icon {
+                  icon
+                }
+                title
+              }
+            }
             Logos {
               Titulo
               _key
@@ -70,6 +110,38 @@ const useHome = () => {
                 title
                 _rawContent
               }
+              ... on SanityTextImageCarousel {
+                _key
+                _type
+                slides {
+                  image {
+                    alt
+                    image {
+                      hotspot {
+                        y
+                        x
+                        width
+                        height
+                      }
+                      crop {
+                        top
+                        right
+                        left
+                        bottom
+                      }
+                      asset {
+                        _id
+                      }
+                    }
+                  }
+                  textBlock {
+                    title
+                    _rawContent
+                  }
+                  _type
+                }
+              }
+
               ... on SanityTextImage {
                 _key
                 _type

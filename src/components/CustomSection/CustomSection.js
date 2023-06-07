@@ -1,7 +1,8 @@
 import React from "react";
-import { TextBlock, TextImage} from "../";
+import { TextBlock, TextImage, TextImageCarousel } from "../";
 
 const CustomSection = ({ sections }) => {
+  console.log(sections);
   const sectionResult = sections.map((section) => {
     {
       if (
@@ -17,11 +18,11 @@ const CustomSection = ({ sections }) => {
           />
         );
       }
-        if (
-          section?._type !== null &&
-          section?._type !== undefined &&
-          section?._type === "textImage"
-        ) {
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImage"
+      ) {
         return (
           <TextImage
             key={section._key}
@@ -30,6 +31,13 @@ const CustomSection = ({ sections }) => {
             image={section.image.image}
           />
         );
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImageCarousel"
+      ) {
+        return <TextImageCarousel key={section._key} slides={section.slides} />;
       }
     }
   });
