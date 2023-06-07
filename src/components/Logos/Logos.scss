@@ -1,0 +1,28 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+
+.logos-container {
+   display: flex;
+    height: auto;
+    flex-flow: column wrap; 
+    width: 100%;
+    justify-content:center;
+    gap: 10px;
+    align-items: center;
+    .titulo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    .image-content{
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+    .image{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+}
+

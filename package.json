@@ -33,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.9.0",
+    "react-responsive-carousel": "^3.2.23",
     "sass": "^1.57.1",
     "sharp": "^0.31.3"
   }
