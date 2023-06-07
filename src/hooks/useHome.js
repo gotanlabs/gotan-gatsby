@@ -6,6 +6,32 @@ const useHome = () => {
         sanityHome {
             titlePage
             descriptionPage
+            Logos {
+              Titulo
+              _key
+              logo {
+                _key
+                alt
+                image {
+                  _key
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+            }
             banner {
               autoplay
               slides {
