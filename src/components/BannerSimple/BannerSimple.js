@@ -7,7 +7,8 @@ import CustomLink from "../CustomLink/CustomLink";
 const BannerSimple = ({ data }) => {
   console.log(data)
   return (
-    <div className="bannerSimple-container">
+    <div className="bannerSimple-container mb-5">
+      <div className="image-bannerSimple">
       {(
         data.image.image !== null ? <SanityImage
           {...data.image.image}
@@ -15,6 +16,7 @@ const BannerSimple = ({ data }) => {
           className="image-bannerSimple"
         /> : <></>
       )}
+      </div>
       <div className="bannerSimple-text-button">
         <div className="title-bannerSimple">
         <h1>{data.textIcon.title}</h1>
