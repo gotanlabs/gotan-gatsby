@@ -9,7 +9,7 @@ const Home = () => {
   const data = useHome().sanityHome;
   return <>
     <Seo title='Home' description='' keywords='' />
-    {data !== null ? <div className="container">
+    {data !== null ? <div>
       {data.banner !== null ? <Banner banner={data.banner} /> : <></>}
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}
       <Logos logos={data.Logos} />
