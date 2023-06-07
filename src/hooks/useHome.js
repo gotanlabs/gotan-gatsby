@@ -14,7 +14,6 @@ const useHome = () => {
                   icon
                 }
                 iconbutton {
-                  _key
                   text
                   url
                 }
@@ -23,6 +22,30 @@ const useHome = () => {
               image {
                 alt
                 image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              textIcon {
+                icon {
+                  icon
+                }
+                title
+              }
+            }
             Logos {
               Titulo
               _key
@@ -46,12 +69,6 @@ const useHome = () => {
                     x
                     y
                   }
-                }
-              }
-              textIcon {
-                title
-                icon {
-                  icon
                 }
               }
             }

@@ -3,7 +3,6 @@ import useHome from "../../hooks/useHome";
 import Banner from "../Banner/Banner";
 import {Seo, CustomSection} from "../";
 import BannerSimple from "../BannerSimple/BannerSimple";
-import { Seo, CustomSection } from "../";
 import Logos from "../Logos/Logos";
 
 
