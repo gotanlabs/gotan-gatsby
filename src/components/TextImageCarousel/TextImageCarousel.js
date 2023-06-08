@@ -7,9 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import { RiArrowRightFill } from "react-icons/ri";
 import { RiArrowLeftFill } from "react-icons/ri";
 
-
 const TextImageCarousel = ({ slides }) => {
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -25,6 +23,9 @@ const TextImageCarousel = ({ slides }) => {
       setCurrentSlide(index);
     }
   };
+
+  const showLeftArrow = currentSlide > 0;
+  const showRightArrow = currentSlide < slides.length - 1 && slides.length > 1;
 
   return (
     <>
@@ -57,13 +58,19 @@ const TextImageCarousel = ({ slides }) => {
             ))}
           </Carousel>
           <div className="arrowsContainer">
-            <button onClick={prev}>
-              <RiArrowLeftFill size={25} color="#4A80FF"/>
-            </button>
-            <button onClick={next}>
-              {" "}
-              <RiArrowRightFill size={25} color="#4A80FF" />
-            </button>
+            {showLeftArrow && (
+              <button onClick={prev}>
+                <RiArrowLeftFill size={25} color="#4A80FF" />
+              </button>
+            )}
+            {showRightArrow ? (
+              <button onClick={next}>
+                {" "}
+                <RiArrowRightFill size={25} color="#4A80FF" />
+              </button>
+            ) : (
+              <div style={{width:37}}></div>
+            )}
           </div>
         </div>
       </div>
