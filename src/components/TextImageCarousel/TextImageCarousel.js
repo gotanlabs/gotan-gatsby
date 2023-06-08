@@ -28,7 +28,7 @@ const TextImageCarousel = ({ slides }) => {
 
   return (
     <>
-      <div className="carouselWrapper py-3 py-md-5">
+      <div className="carouselWrapper section-padding">
         <div className="container">
           <Carousel
             showStatus={false}

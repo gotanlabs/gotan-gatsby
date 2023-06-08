@@ -1,10 +1,7 @@
 @import "../../styles/global";
 
 .animatedAccordionContainer {
-  h2 {
-    margin-bottom: 35px;
-  }
-  &__summary {
+  h2, &__summary {
     margin-bottom: 35px;
   }
 }
@@ -12,29 +9,32 @@
 .sectionContainer {
   margin-bottom: 20px;
   padding: 20px;
-  border: 2px solid #000000;
+  border: 2px solid $color-black;
   border-radius: 8px;
   .body-large {
-    width: max-content;
-    padding: 2px 7px;
     margin-bottom: 15px;
-    border: 1.5px solid #000000;
-    border-radius: 8px;
-    background-color: white;
+    display: flex;
+    div{
+      width: max-content;
+      height: fit-content;
+      border: 1.5px solid $color-black;
+      border-radius: 8px;
+      padding: 2px 7px;
+      background-color: $color-white;
+      margin-right: 5px;
+    }
   }
 }
 
-.sections .sectionContainer:nth-child(1) {
-  background-color: #ce67ff;
+.sections .sectionContainer:nth-child(n+1) {
+  background-color: $color-secondary;
 }
 
-.sections .sectionContainer:nth-child(2) {
-  background-color: #00d9ff;
+.sections .sectionContainer:nth-child(n+2) {
+  background-color: $color-primary;
 }
 
-.sections .sectionContainer:nth-child(3) {
-  background-color: #ccff00;
+.sections .sectionContainer:nth-child(n+3) {
+  background-color: $color-tertiary;
 }
 
-@media (min-width: $md-breakpoint) {
-}
