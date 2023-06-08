@@ -14,7 +14,7 @@ import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
 import AnimatedAccordion from "./AnimatedAccordion/AnimatedAccordion"
 import { Seo } from "./seo"
-
+import TextButton from "./TextButton/TextButton"
 
 
 export {
@@ -32,6 +32,7 @@ export {
     TextImage,
     CustomSection,
     Seo,
+    AnimatedAccordion,
+    TextButton,
     TextImageCarousel,
-    AnimatedAccordion
 }

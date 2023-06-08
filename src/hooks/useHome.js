@@ -6,6 +6,88 @@ const useHome = () => {
         sanityHome {
             titlePage
             descriptionPage
+            textButton {
+              _key
+              iconButton {
+                icon {
+                  icon
+                }
+                iconbutton {
+                  text
+                  url
+                }
+              }
+              text {
+                _rawContent
+                title
+              }
+            }
+            bannerSimple {
+              _key
+              iconButton {
+                _key
+                icon {
+                  icon
+                }
+                iconbutton {
+                  text
+                  url
+                }
+                title
+              }
+              image {
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              textIcon {
+                icon {
+                  icon
+                }
+                title
+              }
+            }
+            dualAsymmetric {
+              _key
+              image {
+                _key
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              imageSide
+              title
+            }
             Logos {
               Titulo
               _key
