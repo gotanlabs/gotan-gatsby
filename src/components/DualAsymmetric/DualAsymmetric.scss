@@ -1,0 +1,66 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+.DualAsymmetric {
+  background-color: #f8f8f6;
+  .dualContainer{
+    height: 490px;
+    display: flex;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr;
+  .titleContainer{
+    background-color:#CCFF00 ;
+    border: solid black 2px;
+    border-radius: 10px;
+    position: relative;
+    .titleDual{
+      position: absolute;
+      bottom: 20px;
+      padding: 30px;
+      margin: 0;
+      width: 80%;
+      font-weight: 500;
+      font-size: 72px;
+    line-height: 120%;
+    font-family: $primary-font;
+    }
+  }
+  .asymmetricImage {
+    object-fit: cover;
+    border: solid black 2px;
+    border-radius: 10px;
+  }
+  }
+ 
+}
+
+
+@media (max-width: $sm-breakpoint){
+  .asymmetricImage{
+    display: none;
+  }
+
+  .DualAsymmetric .dualContainer .titleContainer .titleDual {
+    font-size: 40px;
+    width: 90%;
+  }
+  
+   .titleContainer {
+    display: inline-block;
+    height: 354px;
+
+}
+
+}
+
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint){
+
+  .DualAsymmetric .dualContainer .asymmetricImage img{
+    display: none;
+  }
+
+  .DualAsymmetric .dualContainer .titleContainer .titleDual {
+    font-size: 50px;
+    width: 100%;
+  }
+}

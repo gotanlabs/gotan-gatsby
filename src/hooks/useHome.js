@@ -62,6 +62,32 @@ const useHome = () => {
                 title
               }
             }
+            dualAsymmetric {
+              _key
+              image {
+                _key
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              imageSide
+              title
+            }
             Logos {
               Titulo
               _key
