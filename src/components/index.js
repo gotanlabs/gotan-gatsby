@@ -13,7 +13,7 @@ import TextImage from "./TextImage/TextImage"
 import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
 import { Seo } from "./seo"
-
+import TextButton from "./TextButton/TextButton"
 
 
 export {
@@ -31,5 +31,6 @@ export {
     TextImage,
     CustomSection,
     Seo,
-    TextImageCarousel
+    TextButton,
+    TextImageCarousel,
 }
