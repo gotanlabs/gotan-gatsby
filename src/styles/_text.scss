@@ -24,8 +24,8 @@ font-family: 'Space Grotesk', sans-serif;
 font-family: 'Inter', sans-serif;
 */
 
-$primary-font: 'Figtree', sans-serif;
-$secondary-font: "Roboto", sans-serif;
+$primary-font: 'Space Grotesk', sans-serif;
+$secondary-font: "Figtree", sans-serif;
 
 h1,
 h2,
@@ -37,12 +37,16 @@ h6 {
 }
 
 p {
-  font-family: $primary-font;
-  // font-family: $secondary-font;
+  font-family: $secondary-font;
   font-size: 18px;
 }
 
-.body-large>* {
+h2{
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.body-large, .body-large>* {
   font-size: 20px !important;
   line-height: 31px;
 }
@@ -66,5 +70,8 @@ small {
   }
   .label-small>* {
     font-size: 14px;
+  }
+  h2 {
+    font-size: 64px;
   }
 }

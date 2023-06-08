@@ -1,0 +1,40 @@
+@import "../../styles/global";
+
+.animatedAccordionContainer {
+  h2 {
+    margin-bottom: 35px;
+  }
+  &__summary {
+    margin-bottom: 35px;
+  }
+}
+
+.sectionContainer {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  .body-large {
+    width: max-content;
+    padding: 2px 7px;
+    margin-bottom: 15px;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    background-color: white;
+  }
+}
+
+.sections .sectionContainer:nth-child(1) {
+  background-color: #ce67ff;
+}
+
+.sections .sectionContainer:nth-child(2) {
+  background-color: #00d9ff;
+}
+
+.sections .sectionContainer:nth-child(3) {
+  background-color: #ccff00;
+}
+
+@media (min-width: $md-breakpoint) {
+}

@@ -12,6 +12,7 @@ import TextBlock from "./TextBlock/TextBlock"
 import TextImage from "./TextImage/TextImage"
 import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
+import AnimatedAccordion from "./AnimatedAccordion/AnimatedAccordion"
 import { Seo } from "./seo"
 
 
@@ -31,5 +32,6 @@ export {
     TextImage,
     CustomSection,
     Seo,
-    TextImageCarousel
+    TextImageCarousel,
+    AnimatedAccordion
 }
