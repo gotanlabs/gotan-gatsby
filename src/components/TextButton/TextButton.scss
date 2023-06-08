@@ -2,6 +2,9 @@
 @import "../../styles/text";
 @import "../../styles/global";
 
+.background-textButton{
+    background-color: #f8f8f6;
+}
 /* Featured words */
 code {
     font-size: 20px !important;
@@ -25,8 +28,7 @@ code {
     }
 }
 /* End featured words */
-
-.textBlock {
+.textButton-text {
     font-family: $primary-font;
     font-size: 20px;
     font-weight: 400;
@@ -34,24 +36,26 @@ code {
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 20px;
+    width: 95%;
 
-    h3.textBlock__title {
+    h1 {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 20px;
+        margin-left: 7px;
     }
-
-    :nth-child(2) {
-        margin-bottom: 20px;
+    p{
+        line-height: 2.1;
+        padding: 10px;
     }
 }
 
+/* Media query text button mobile */
 @media (max-width: $md-breakpoint) {
-    .textBlock {
-        padding: 12px;
+    .textButton-text {
         font-size: 18px;
-
-        h3.textBlock__title {
+        width: 100%;
+        h1 {
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 20px;
@@ -62,3 +66,13 @@ code {
         font-size: 18px !important;
     }
 }
+/* End media text button simple mobile */
+
+/* Media query text button tablet */
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+    .textButton-text {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+/* End media query text button tablet */
