@@ -104,6 +104,7 @@
     font-family: Figtree, sans-serif;
     white-space: nowrap;
     padding: 0px 15px;
+    margin: 0 auto;
   }
 
   .button-bannerSimple .custom-link .icon {
@@ -112,6 +113,10 @@
     padding-left: 8px;
   }
 
+  .button-bannerSimple.dark {
+    margin-top: 20px;
+    width: 100%;
+}
 }
 /* End media query Banner simple mobile */
 
