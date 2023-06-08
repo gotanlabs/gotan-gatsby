@@ -6,6 +6,46 @@ const useHome = () => {
         sanityHome {
             titlePage
             descriptionPage
+            bannerSimple {
+              _key
+              iconButton {
+                _key
+                icon {
+                  icon
+                }
+                iconbutton {
+                  text
+                  url
+                }
+                title
+              }
+              image {
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    bottom
+                    left
+                    right
+                    top
+                  }
+                  hotspot {
+                    height
+                    width
+                    x
+                    y
+                  }
+                }
+              }
+              textIcon {
+                icon {
+                  icon
+                }
+                title
+              }
+            }
             dualAsymmetric {
               _key
               image {

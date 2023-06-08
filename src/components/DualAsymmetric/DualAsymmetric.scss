@@ -2,36 +2,65 @@
 @import "../../styles/text";
 @import "../../styles/global";
 .DualAsymmetric {
-  display: flex;
+  background-color: #f8f8f6;
+  .dualContainer{
+    height: 490px;
+    display: flex;
+  justify-content: space-evenly;
   grid-template-columns: 1fr;
   .titleContainer{
     background-color:#CCFF00 ;
-    .ImageContainer {
-      padding: 3rem 4rem;
-      img {
-        max-width: 192px !important;
-        display: block;
-        margin: 0 auto;
-      }
+    border: solid black 2px;
+    border-radius: 10px;
+    position: relative;
+    .titleDual{
+      position: absolute;
+      bottom: 20px;
+      padding: 30px;
+      margin: 0;
+      width: 80%;
+      font-weight: 500;
+      font-size: 72px;
+    line-height: 120%;
+    font-family: $primary-font;
     }
   }
-}
-.DualAsymmetric .ImageContainer {
-  padding: 3rem 4rem;
-  img {
-    max-width: 192px !important;
-    display: block;
-    margin: 0 auto;
+  .asymmetricImage {
+    object-fit: cover;
+    border: solid black 2px;
+    border-radius: 10px;
   }
+  }
+ 
 }
-.DualAsymmetric .TextContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+
+@media (max-width: $sm-breakpoint){
+  .asymmetricImage{
+    display: none;
+  }
+
+  .DualAsymmetric .dualContainer .titleContainer .titleDual {
+    font-size: 40px;
+    width: 90%;
+  }
+  
+   .titleContainer {
+    display: inline-block;
+    height: 354px;
+
 }
-.DualAsymmetric .Title {
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-  line-height: normal;
+
+}
+
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint){
+
+  .DualAsymmetric .dualContainer .asymmetricImage img{
+    display: none;
+  }
+
+  .DualAsymmetric .dualContainer .titleContainer .titleDual {
+    font-size: 50px;
+    width: 100%;
+  }
 }
