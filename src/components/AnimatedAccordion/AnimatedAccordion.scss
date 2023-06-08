@@ -2,7 +2,7 @@
 
 .animatedAccordionContainer {
   h2, &__summary {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 }
 
@@ -36,5 +36,13 @@
 
 .sections .sectionContainer:nth-child(n+3) {
   background-color: $color-tertiary;
+}
+
+@media (min-width: $md-breakpoint) {
+  .animatedAccordionContainer {
+    h2, &__summary {
+      margin-bottom: 35px;
+    }
+  }
 }
 
