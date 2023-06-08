@@ -24,9 +24,6 @@ const TextImageCarousel = ({ slides }) => {
     }
   };
 
-  const showLeftArrow = currentSlide > 0;
-  const showRightArrow = currentSlide < slides.length - 1 && slides.length > 1;
-
   return (
     <>
       <div className="carouselWrapper section-padding">
@@ -37,6 +34,7 @@ const TextImageCarousel = ({ slides }) => {
             showIndicators={false}
             showArrows={false}
             autoPlay={true}
+            infiniteLoop={true}
             selectedItem={currentSlide}
             onChange={updateCurrentSlide}
           >
@@ -58,19 +56,14 @@ const TextImageCarousel = ({ slides }) => {
             ))}
           </Carousel>
           <div className="arrowsContainer">
-            {showLeftArrow && (
-              <button onClick={prev}>
-                <RiArrowLeftFill size={25} color="#4A80FF" />
-              </button>
-            )}
-            {showRightArrow ? (
-              <button onClick={next}>
-                {" "}
-                <RiArrowRightFill size={25} color="#4A80FF" />
-              </button>
-            ) : (
-              <div style={{width:37}}></div>
-            )}
+            <button onClick={prev}>
+              <RiArrowLeftFill size={25} color="#4A80FF" />
+            </button>
+
+            <button onClick={next}>
+              {" "}
+              <RiArrowRightFill size={25} color="#4A80FF" />
+            </button>
           </div>
         </div>
       </div>
