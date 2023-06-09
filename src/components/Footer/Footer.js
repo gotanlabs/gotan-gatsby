@@ -11,8 +11,8 @@ const Footer = () => {
 
   return (
     data !== null && (
-      <footer className="footer px-2">
-       <div className='line container '></div>
+      <footer className="footer py-3 py-md-5">
+       <div className='line '></div>
         <div className="container py-4 d-flex flex-wrap test" >
           <div>
               { (
