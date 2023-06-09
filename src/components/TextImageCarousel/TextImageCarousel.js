@@ -7,9 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import { RiArrowRightFill } from "react-icons/ri";
 import { RiArrowLeftFill } from "react-icons/ri";
 
-
 const TextImageCarousel = ({ slides }) => {
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -28,7 +26,7 @@ const TextImageCarousel = ({ slides }) => {
 
   return (
     <>
-      <div className="carouselWrapper py-3 py-md-5">
+      <div className="carouselWrapper section-padding">
         <div className="container">
           <Carousel
             showStatus={false}
@@ -36,6 +34,7 @@ const TextImageCarousel = ({ slides }) => {
             showIndicators={false}
             showArrows={false}
             autoPlay={true}
+            infiniteLoop={true}
             selectedItem={currentSlide}
             onChange={updateCurrentSlide}
           >
@@ -58,8 +57,9 @@ const TextImageCarousel = ({ slides }) => {
           </Carousel>
           <div className="arrowsContainer">
             <button onClick={prev}>
-              <RiArrowLeftFill size={25} color="#4A80FF"/>
+              <RiArrowLeftFill size={25} color="#4A80FF" />
             </button>
+
             <button onClick={next}>
               {" "}
               <RiArrowRightFill size={25} color="#4A80FF" />

@@ -152,6 +152,16 @@ const useHome = () => {
                 title
                 _rawContent
               }
+              ... on SanityAnimatedAccordion {
+                _key
+                _type
+                title
+                summary
+                sections {
+                  title
+                  _rawContent
+                }
+              }
               ... on SanityTextImageCarousel {
                 _key
                 _type
