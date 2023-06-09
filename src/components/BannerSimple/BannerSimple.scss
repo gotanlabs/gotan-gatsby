@@ -49,6 +49,8 @@
 
 .bannerSimple-container {
   position: relative;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .image-bannerSimple {
@@ -87,6 +89,9 @@
     align-items: flex-start;
     color: white;
     padding: 20px;
+  }
+  .bannerSimple-container {
+    width: 95%;
   }
 
   .title-bannerSimple {
@@ -136,6 +141,9 @@
     align-items: flex-start;
     color: white;
     padding: 20px;
+  }
+  .bannerSimple-container {
+    width: 95%;
   }
 
   .title-bannerSimple {
