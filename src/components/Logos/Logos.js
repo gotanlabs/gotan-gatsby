@@ -5,7 +5,7 @@ import SanityImage from "gatsby-plugin-sanity-image";
 const Logos = (logos) => {
 
   return (
-    <div className="logos-container py-4"> 
+    <div className="logos-container section-padding"> 
     <h5 className="titulo">{logos.logos.Titulo}</h5>
     <div className="image-content container">
     {logos.logos.logo && logos.logos.logo.map((logo) => (
