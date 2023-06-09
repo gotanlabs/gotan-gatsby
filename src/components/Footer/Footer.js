@@ -25,7 +25,7 @@ const Footer = () => {
             {data.linkArray.length !== 0 &&
             data.linkArray.map((block) => (
               <div className="linkArray"> 
-              <FooterLinkArray 
+              <FooterLinkArray
                 key={block._key}
                 links={block.links}
               />

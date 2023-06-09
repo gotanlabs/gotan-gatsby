@@ -7,9 +7,11 @@
   p {
     font-family: $primary-font;
   }
+
   a {
     color: $color-black;
     opacity: 0.9;
+    font-size: 14px;
     text-decoration: none;
     &:hover {
       color: $color-link-active;
@@ -82,6 +84,11 @@
     padding: 0;
     margin: 0;
   }
+
+  .linkText{
+    font-size: 5px;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -116,4 +123,19 @@
   .blockChild{
     margin-bottom: 20px;
   }
+}
+
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint){
+  .footer__logo {
+    width: 70%;
+  }
+
+  .footer a{
+    font-size: 12px;
+  }
+
+  .footer h5{
+    font-size: 14px;
+  }
+
 }
