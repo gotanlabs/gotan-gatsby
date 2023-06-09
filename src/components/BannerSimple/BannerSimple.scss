@@ -34,6 +34,7 @@
 
 .button-bannerSimple.dark{
   margin-top: 20px;
+  margin-left: 24px;
   .custom-link {
     border: white solid 2px;
     background-color: black;
@@ -120,6 +121,7 @@
 
   .button-bannerSimple.dark {
     margin-top: 20px;
+    margin-left: 0px;
     width: 100%;
 }
 }
@@ -127,6 +129,7 @@
 
 /* Media query Banner simple tablet */
 @media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+  
   .bannerSimple-text-button {
     position: absolute;
     top: 180px;
@@ -168,3 +171,13 @@
   }
 }
 /* End media query Banner simple tablet */
+
+
+/* Media query btn get in touch mobile */
+@media (min-width: $lg-breakpoint) {
+  .button-bannerSimple.dark{
+    margin-top: 0px;
+  }
+}
+/* End media query btn get in touch mobile */
+
