@@ -13,9 +13,9 @@ import { Link } from "gatsby";
 const Header = () => {
   const data = useHeader().sanityHeader;
   return (
-    <header className="header">
+    <header className="header sticky-top">
       {['lg'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="mb-3 mt-3">
+        <Navbar key={expand} expand={expand} className="mb-3 pt-4">
           <Container>
             <Link href="/">
               <SanityImage
@@ -40,7 +40,7 @@ const Header = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <div className='line-mobile container '></div>
+                <div className='line-mobile'></div>
                 {data.menu !== null ? <Menu links={data.menu.links} /> : <></>}
                 {data.customLinkBlock !== null ? (
                   <LinkBlock links={data.customLinkBlock?.links} />
@@ -52,7 +52,7 @@ const Header = () => {
           </Container>
         </Navbar>
       ))}
-      <div className='line-desktop container '></div>
+      <div className='line-desktop'></div>
     </header>
   );
 }
