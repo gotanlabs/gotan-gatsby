@@ -8,10 +8,9 @@ const DualAsymmetric = ({
   data: {
     title,
     image,
-    imageSide,
   },
 }) => {
-    console.log("data componente", title)
+    console.log("data dual", title)
   return (
     <div className={` DualAsymmetric py-3 py-md-5`} >
     <div className={`container dualContainer`} >
@@ -26,7 +25,7 @@ const DualAsymmetric = ({
           <SanityImage {...image.image} alt={image.alt} />
         </div>
       )}
-      <div className={`emptyRight ${imageSide}`} style={{ backgroundColor: "gray" }}></div>
+      <div  style={{ backgroundColor: "gray" }}></div>
     </div>
     </div>
   )

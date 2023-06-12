@@ -10,14 +10,12 @@ import DualAsymmetric from "../DualAsymmetric/DualAsymmetric";
 const Home = () => {
   const data = useHome().sanityHome;
   
+  
   return <>
     <Seo title='Home' description='' keywords='' />
     {data !== null ? <div>
-     <DualAsymmetric data={data.dualAsymmetric}/>
-     <TextButton data={data.textButton}/>
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}
-      <Logos logos={data.Logos} />
-      <BannerSimple data={data.bannerSimple}/>
+     
     </div> : <div className="d-flex justify-content-center">
     </div>}
   </>
