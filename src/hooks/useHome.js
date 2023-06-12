@@ -6,125 +6,24 @@ const useHome = () => {
         sanityHome {
             titlePage
             descriptionPage
-            textButton {
-              _key
-              iconButton {
-                icon {
-                  icon
-                }
-                iconbutton {
-                  text
-                  url
-                }
-              }
-              text {
-                _rawContent
-                title
-              }
-            }
-            bannerSimple {
-              _key
-              iconButton {
+            dinamicContent {
+              ... on SanityBannerSimple {
                 _key
-                icon {
-                  icon
+                _type
+                iconButton {
+                  icon {
+                    icon
+                  }
+                  iconbutton {
+                    url
+                    text
+                  }
+                  title
                 }
-                iconbutton {
-                  text
-                  url
-                }
-                title
-              }
-              image {
-                alt
-                image {
-                  asset {
-                    _id
-                  }
-                  crop {
-                    bottom
-                    left
-                    right
-                    top
-                  }
-                  hotspot {
-                    height
-                    width
-                    x
-                    y
-                  }
-                }
-              }
-              textIcon {
-                icon {
-                  icon
-                }
-                title
-              }
-            }
-            dualAsymmetric {
-              _key
-              image {
-                _key
-                alt
-                image {
-                  asset {
-                    _id
-                  }
-                  crop {
-                    bottom
-                    left
-                    right
-                    top
-                  }
-                  hotspot {
-                    height
-                    width
-                    x
-                    y
-                  }
-                }
-              }
-              imageSide
-              title
-            }
-            Logos {
-              Titulo
-              _key
-              logo {
-                _key
-                alt
-                image {
-                  _key
-                  asset {
-                    _id
-                  }
-                  crop {
-                    bottom
-                    left
-                    right
-                    top
-                  }
-                  hotspot {
-                    height
-                    width
-                    x
-                    y
-                  }
-                }
-              }
-            }
-            banner {
-              autoplay
-              slides {
-                title
-                text
-                url
-                overlay
                 image {
                   alt
+                  _key
                   image {
-                    _key
                     asset {
                       _id
                     }
@@ -141,16 +40,81 @@ const useHome = () => {
                       height
                     }
                   }
-                 
+                }
+                textIcon {
+                  icon {
+                    icon
+                  }
+                  title
                 }
               }
-            }
-            dinamicContent {
-              ... on SanityTextBlock {
+              ... on SanityDualAsymmetric {
                 _key
                 _type
+                bannerStyle
+                image {
+                  alt
+                  image {
+                    asset {
+                      _id
+                    }
+                    crop {
+                      top
+                      right
+                      left
+                      bottom
+                    }
+                    hotspot {
+                      y
+                      x
+                      width
+                      height
+                    }
+                  }
+                }
                 title
-                _rawContent
+              }
+              ... on SanityLogos {
+                _key
+                _type
+                logo {
+                  alt
+                  image {
+                    asset {
+                      _id
+                    }
+                    crop {
+                      top
+                      right
+                      left
+                      bottom
+                    }
+                    hotspot {
+                      y
+                      x
+                      width
+                      height
+                    }
+                  }
+                }
+              }
+              ... on SanityTextButton {
+                _key
+                _type
+                iconButton {
+                  icon {
+                    icon
+                  }
+                  iconbutton {
+                    text
+                    url
+                  }
+                  title
+                }
+                text {
+                  _rawContent
+                  title
+                }
               }
               ... on SanityAnimatedAccordion {
                 _key

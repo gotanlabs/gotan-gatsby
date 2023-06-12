@@ -15,6 +15,9 @@ import CustomSection from "./CustomSection/CustomSection"
 import AnimatedAccordion from "./AnimatedAccordion/AnimatedAccordion"
 import { Seo } from "./seo"
 import TextButton from "./TextButton/TextButton"
+import DualAsymmetric from "./DualAsymmetric/DualAsymmetric"
+import BannerSimple from "./BannerSimple/BannerSimple"
+import Logos from "./Logos/Logos"
 
 
 export {
@@ -35,4 +38,7 @@ export {
     AnimatedAccordion,
     TextButton,
     TextImageCarousel,
+    BannerSimple,
+    Logos,
+    DualAsymmetric
 }
