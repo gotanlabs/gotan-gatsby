@@ -3,7 +3,7 @@ import "./Logos.scss"
 import SanityImage from "gatsby-plugin-sanity-image";
 
 const Logos = (logos) => {
-
+console.log('logos', logos)
   return (
     <div className="logos-container section-padding"> 
     <h5 className="titulo">{logos.logos.Titulo}</h5>
@@ -19,7 +19,6 @@ const Logos = (logos) => {
       </div>
     ))} 
     </div>
-  
 </div>
   )
 }

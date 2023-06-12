@@ -77,9 +77,11 @@ const useHome = () => {
               ... on SanityLogos {
                 _key
                 _type
+                Titulo
                 logo {
                   alt
                   image {
+                    _key
                     asset {
                       _id
                     }
