@@ -1,5 +1,5 @@
 import React from "react";
-import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos } from "../";
+import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton } from "../";
 
 
 
@@ -39,36 +39,43 @@ const CustomSection = ({ sections }) => {
         section?._type !== undefined &&
         section?._type === "textImageCarousel"
       ) {
-        return <TextImageCarousel key={section._key} slides={section.slides}             title={section.textBlock?.title}
-            text={section.textBlock?._rawContent}/>;
+        return <TextImageCarousel key={section._key} slides={section.slides} title={section.textBlock?.title}
+          text={section.textBlock?._rawContent} />;
       }
       if (
         section?._type !== null &&
         section?._type !== undefined &&
         section?._type === "animatedAccordion"
       ) {
-        return <AnimatedAccordion key={section._key} sections={section.sections} summary={section.summary} title={section.title}/>;
+        return <AnimatedAccordion key={section._key} sections={section.sections} summary={section.summary} title={section.title} />;
       }
       if (
         section?._type !== null &&
         section?._type !== undefined &&
         section?._type === "dualAsymmetric"
       ) {
-        return <DualAsymmetric key={section._key} data={section}/>;
+        return <DualAsymmetric key={section._key} data={section} />;
       }
       if (
         section?._type !== null &&
         section?._type !== undefined &&
         section?._type === "bannerSimple"
       ) {
-        return <BannerSimple key={section._key} data={section}/>;
+        return <BannerSimple key={section._key} data={section} />;
       }
       if (
         section?._type !== null &&
         section?._type !== undefined &&
-        section?._type === "Logos"
+        section?._type === "logos"
       ) {
-        return <Logos key={section._key} data={section}/>;
+        return <Logos key={section._key} logos={section} />;
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textButton"
+      ) {
+        return <TextButton key={section._key} data={section} />;
       }
 
     }

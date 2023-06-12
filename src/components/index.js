@@ -18,6 +18,7 @@ import TextButton from "./TextButton/TextButton"
 import DualAsymmetric from "./DualAsymmetric/DualAsymmetric"
 import BannerSimple from "./BannerSimple/BannerSimple"
 import Logos from "./Logos/Logos"
+import About from "./About/About"
 
 
 export {
@@ -40,5 +41,6 @@ export {
     TextImageCarousel,
     BannerSimple,
     Logos,
-    DualAsymmetric
+    DualAsymmetric,
+    About
 }

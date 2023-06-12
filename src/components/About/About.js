@@ -1,13 +1,13 @@
 import React from "react";
-import useHome from "../../hooks/useHome";
+import useAbout from "../../hooks/useAbout";
 import {Seo, CustomSection} from "../";
 
-const Home = () => {
-  const data = useHome().sanityHome;
+const About = () => {
+  const data = useAbout().sanityHome;
   
   
   return <>
-    <Seo title='Home' description='' keywords='' />
+    <Seo title='About' description='' keywords='' />
     {data !== null ? <div>
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}
      
@@ -17,4 +17,4 @@ const Home = () => {
 
 };
 
-export default Home;
+export default About;
