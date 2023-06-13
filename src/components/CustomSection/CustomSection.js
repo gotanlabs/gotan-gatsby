@@ -1,5 +1,5 @@
 import React from "react";
-import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton } from "../";
+import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent } from "../";
 
 
 
@@ -77,7 +77,13 @@ const CustomSection = ({ sections }) => {
       ) {
         return <TextButton key={section._key} data={section} />;
       }
-
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textContent"
+      ) {
+        return <TextContent key={section._key} data={section} />;
+      }
     }
   });
   return <>{sectionResult}</>;

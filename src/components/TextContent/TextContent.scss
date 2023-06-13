@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.textContent {
+    font-family: $primary-font;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 95%;
+    margin-left: 24px;
+
+    p{
+        line-height: 2;
+        padding: 7px;
+        font-size: 28px;
+    }
+}
+
+/* Media query text mobile */
+@media (max-width: $sm-breakpoint) {
+    .textContent {
+        font-size: 18px;
+        width: 95%;
+        margin-left: 0px;
+        p{
+            font-size: 20px;
+        }
+    }
+}
+/* End media text simple mobile */
+
+/* Media query text tablet */
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+    .textContent{
+        font-size: 18px;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+/* End media query text tablet */

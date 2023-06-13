@@ -19,6 +19,7 @@ import DualAsymmetric from "./DualAsymmetric/DualAsymmetric"
 import BannerSimple from "./BannerSimple/BannerSimple"
 import Logos from "./Logos/Logos"
 import About from "./About/About"
+import TextContent from "./TextContent/TextContent"
 
 
 export {
@@ -42,5 +43,6 @@ export {
     BannerSimple,
     Logos,
     DualAsymmetric,
-    About
+    About,
+    TextContent
 }
