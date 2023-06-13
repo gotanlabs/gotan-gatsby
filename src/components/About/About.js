@@ -4,8 +4,7 @@ import {Seo, CustomSection} from "../";
 
 const About = () => {
   const data = useAbout().sanityAbout;
-  
-  console.log("data", data);
+
   return <>
     <Seo title='About' description='' keywords='' />
     {data !== null ? <div>
