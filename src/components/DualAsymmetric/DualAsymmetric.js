@@ -8,19 +8,20 @@ const DualAsymmetric = ({
   data: {
     title,
     image,
+    bannerStyle,
+    backgroundColor
   },
 }) => {
-    console.log("data dual", title)
+  
   return (
     <div className={` DualAsymmetric py-3 py-md-5`} >
-    <div className={`container dualContainer`} >
-      <div className="titleContainer col-lg-8 col-md-8 col-12">
+    <div className={`container dualContainer ${bannerStyle == "asymmetricImageLeft" ? "flex-row-reverse" : ""}`} >
+      <div className={`titleContainer ${bannerStyle == "asymmetricImageRight" || bannerStyle == "asymmetricImageLeft" ? "col-lg-8 col-md-8 col-12" : "col-6"} ${backgroundColor}`}>
         <h1 className="titleDual">{title}</h1>
       </div >
       {image && (
         <div
-          className={`asymmetricImage col-3`}
-          style={{ backgroundColor: "#14D3FC" }}
+          className={`asymmetricImage ${bannerStyle == "asymmetricImageRight" || bannerStyle == "asymmetricImageLeft" ? "col-3" :  "col-5"}`}   style={{ backgroundColor: "#14D3FC" }}
         >
           <SanityImage {...image.image} alt={image.alt} />
         </div>

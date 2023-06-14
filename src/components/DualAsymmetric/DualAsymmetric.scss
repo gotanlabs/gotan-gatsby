@@ -7,11 +7,30 @@
     height: 490px;
     display: flex;
   justify-content: space-evenly;
-  grid-template-columns: 1fr;
-  .titleContainer{
+
+
+
+  .pink{
+    background-color:#FF42D7 ;
+  }
+  .yellow{
     background-color:#CCFF00 ;
+  }
+  .green{
+    background-color:#00ED1C ;
+  }
+  .lightblue{
+    background-color:#00D9FF;
+  }
+
+  .asymmetricImageLeftImg{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .titleContainer{
     border: solid black 2px;
-    border-radius: 10px;
+    border-radius: 20px;
     position: relative;
     .titleDual{
       position: absolute;
@@ -26,15 +45,16 @@
     }
   }
   .asymmetricImage {
-    object-fit: cover;
     border: solid black 2px;
-    border-radius: 10px;
+    border-radius: 20px;
     img{
-      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
     }
   }
-  }
- 
+}
 }
 
 
@@ -54,10 +74,10 @@
     padding-left: 5%;
   }
   
-   .titleContainer {
+  .DualAsymmetric .dualContainer .titleContainer {
     display: inline-block;
     height: 354px;
-
+    width: 100%;
 }
 
 }
