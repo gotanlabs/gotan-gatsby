@@ -23,10 +23,12 @@ const BannerSimple = ({ data }) => {
         {data.textIcon.icon !== null && <Icon className="icon-title-bannerSimple" code={data.textIcon.icon.icon}></Icon>}
         </div>
         <div className="button-bannerSimple">
-          <CustomLink
+        {(
+          data.iconButton.iconbutton !== null ? <CustomLink
             href={data.iconButton.iconbutton.url}
             text={data.iconButton.iconbutton.text} 
-            icon={<Icon code={data.iconButton.icon.icon}></Icon>}/>
+            icon={<Icon code={data.iconButton.icon.icon}></Icon>}/> : <></>
+        )}    
         </div>
       </div>
     </div>);
