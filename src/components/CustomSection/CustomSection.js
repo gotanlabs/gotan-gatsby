@@ -1,10 +1,10 @@
 import React from "react";
-import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent } from "../";
+import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent, TextImageCategory } from "../";
 
 
 
 const CustomSection = ({ sections }) => {
-  console.log("sections", sections);
+  
   const sectionResult = sections.map((section) => {
     {
       if (
@@ -83,6 +83,14 @@ const CustomSection = ({ sections }) => {
         section?._type === "textContent"
       ) {
         return <TextContent key={section._key} data={section} />;
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImageCategory"
+      ) {
+        console.log("sections", section);
+        return <TextImageCategory key={section._key} data={section} />;
       }
     }
   });

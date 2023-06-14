@@ -1,17 +1,19 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
 import SanityImage from "gatsby-plugin-sanity-image";
-import "./TextImage.scss";
+import "./TextImageCategory.scss";
 
-const TextImage = ({ title, text, image }) => {
+const TextImageCategory = ({data}) => {
+  console.log(data)
   return (
     <>
       {text && (
         <div className="textImage">
-          {title && <h3 className="textImage__title">{title}</h3>}
+          {category && <p className="textImage__title">{data}</p>}
+          {textBlock.title && <h3 className="textImage__title">{data.title}</h3>}
           <div className="textImage__content">
             <div className="textImage__text">
-              <PortableText value={text} />
+              <PortableText value={data._rawContent} />
             </div>
             {image && <SanityImage
               {...image}
@@ -25,4 +27,4 @@ const TextImage = ({ title, text, image }) => {
   );
 };
 
-export default TextImage;
+export default TextImageCategory;
