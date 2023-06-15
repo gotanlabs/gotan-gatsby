@@ -9,7 +9,7 @@ const ForCompanies = () => {
     <Seo title='For Companies' description='' keywords='' />
     {data !== null ? <div>
       {data.dinamicContent !== null ? <CustomSection sections={data.dinamicContent} /> : <></>}
-     
+      
     </div> : <div className="d-flex justify-content-center">
 
     </div>}
