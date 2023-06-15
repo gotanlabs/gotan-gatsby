@@ -1,7 +1,17 @@
 import React from "react";
-import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent, TextBlockList } from "../";
-
-
+import {
+  TextBlock,
+  TextImage,
+  TextImageCarousel,
+  AnimatedAccordion,
+  DualAsymmetric,
+  BannerSimple,
+  Logos,
+  TextButton,
+  TextContent,
+  TextBlockList,
+} from "../";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const CustomSection = ({ sections }) => {
   console.log("sections", sections);
@@ -39,15 +49,28 @@ const CustomSection = ({ sections }) => {
         section?._type !== undefined &&
         section?._type === "textImageCarousel"
       ) {
-        return <TextImageCarousel key={section._key} slides={section.slides} title={section.textBlock?.title}
-          text={section.textBlock?._rawContent} />;
+        return (
+          <TextImageCarousel
+            key={section._key}
+            slides={section.slides}
+            title={section.textBlock?.title}
+            text={section.textBlock?._rawContent}
+          />
+        );
       }
       if (
         section?._type !== null &&
         section?._type !== undefined &&
         section?._type === "animatedAccordion"
       ) {
-        return <AnimatedAccordion key={section._key} sections={section.sections} summary={section.summary} title={section.title} />;
+        return (
+          <AnimatedAccordion
+            key={section._key}
+            sections={section.sections}
+            summary={section.summary}
+            title={section.title}
+          />
+        );
       }
       if (
         section?._type !== null &&
@@ -89,7 +112,22 @@ const CustomSection = ({ sections }) => {
         section?._type !== undefined &&
         section?._type === "textBlockList"
       ) {
-        return <TextBlockList key={section._key} title={section.title} blocks={section.textBlocks} titleTop={section.titleTop}/>;
+        return (
+          <TextBlockList
+            key={section._key}
+            title={section.title}
+            blocks={section.textBlocks}
+            titleTop={section.titleTop}
+          />
+        );
+      }
+
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "imageCarousel"
+      ) {
+        return <ImageCarousel key={section._key} data={section} />;
       }
     }
   });

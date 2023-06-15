@@ -21,6 +21,7 @@ import Logos from "./Logos/Logos"
 import About from "./About/About"
 import TextContent from "./TextContent/TextContent"
 import TextBlockList from "./TextBlockList/TextBlockList"
+import ImageCarousel from "./ImageCarousel/ImageCarousel"
 
 
 export {
@@ -46,5 +47,6 @@ export {
     DualAsymmetric,
     About,
     TextContent,
-    TextBlockList
+    TextBlockList,
+    ImageCarousel
 }
