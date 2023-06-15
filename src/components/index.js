@@ -51,5 +51,4 @@ export {
     ImageCarousel,
     TextImageCategory,
     ForCompanies,
-    TextBlockList
 }
