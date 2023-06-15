@@ -8,6 +8,20 @@ const useAbout = () => {
               ... on SanityBannerSimple {
                 _key
                 _type
+                iconButton {
+                  _key
+                  _type
+                  icon {
+                    _key
+                    icon
+                  }
+                  iconbutton {
+                    _key
+                    text
+                    url
+                  }
+                  title
+                }
                 image {
                   _key
                   alt
@@ -63,6 +77,7 @@ const useAbout = () => {
                   }
                 }
                 bannerStyle
+                backgroundColor
                 title
               }
               ... on SanityImageCarousel {
