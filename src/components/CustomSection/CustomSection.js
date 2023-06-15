@@ -9,12 +9,14 @@ import {
   Logos,
   TextButton,
   TextContent,
+  TextImageCategory, 
   TextBlockList,
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
+
 const CustomSection = ({ sections }) => {
-  console.log("sections", sections);
+  
   const sectionResult = sections.map((section) => {
     {
       if (
@@ -106,6 +108,13 @@ const CustomSection = ({ sections }) => {
         section?._type === "textContent"
       ) {
         return <TextContent key={section._key} data={section} />;
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImageCategory"
+      ) {
+        return <TextImageCategory key={section._key} data={section} />;
       }
       if (
         section?._type !== null &&
