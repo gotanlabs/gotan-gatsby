@@ -1,0 +1,102 @@
+@import "../../styles/global";
+
+.textBlockList,
+.textBlockListTop {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 40px;
+  }
+  &__block {
+    margin-bottom: 50px;
+    &_title {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $color-base;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (min-width: $md-breakpoint) {
+  .textBlockList {
+    flex-direction: row;
+    h2 {
+      margin-bottom: 50px;
+      width: 40%;
+      padding-right: 10px;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      width: 60%;
+    }
+    &__block {
+      margin-bottom: 40px;
+      width: 45%;
+      margin-left: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      &:hover {
+        background-color: rgba(110, 227, 248, 0.178);
+      }
+      &_title {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .textBlockListTop {
+    flex-direction: column;
+    h2 {
+      margin-bottom: 50px;
+      text-align: center;
+      padding-top: 15px;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+      padding-right: 0;
+    }
+    &__block {
+      width: 25%;
+      padding: 15px;
+      border-radius: 10px;
+      &:hover {
+        background-color: rgba(110, 227, 248, 0.178);
+      }
+      &_title {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .textBlockList {
+    h2 {
+      padding-right: 10px;
+      padding-left: 110px;
+      padding-top: 25px;
+    }
+    &__blocks {
+      padding-right: 20px;
+    }
+    &__block {
+      padding: 25px 10px;
+      margin-bottom: 30px;
+    }
+  }
+  .textBlockListTop {
+    h2 {
+      margin-bottom: 60px;
+    }
+    &__block {
+      padding: 25px;
+    }
+  }
+}

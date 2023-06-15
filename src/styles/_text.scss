@@ -9,7 +9,7 @@ $xxl-breakpoint: 1400px;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
 /* Gotan fonts */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap');
 /*
 font-family: 'Figtree', sans-serif;
 */
@@ -47,6 +47,7 @@ h2{
 }
 
 .body-large, .body-large>* {
+  font-family: $secondary-font;
   font-size: 20px !important;
   line-height: 31px;
 }
