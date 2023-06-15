@@ -1,5 +1,6 @@
 import React from "react";
 import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent } from "../";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 
 
@@ -83,6 +84,13 @@ const CustomSection = ({ sections }) => {
         section?._type === "textContent"
       ) {
         return <TextContent key={section._key} data={section} />;
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "imageCarousel"
+      ) {
+        return <ImageCarousel key={section._key} data={section} />;
       }
     }
   });

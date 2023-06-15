@@ -20,6 +20,7 @@ import BannerSimple from "./BannerSimple/BannerSimple"
 import Logos from "./Logos/Logos"
 import About from "./About/About"
 import TextContent from "./TextContent/TextContent"
+import ImageCarousel from "./ImageCarousel/ImageCarousel"
 
 
 export {
@@ -44,5 +45,6 @@ export {
     Logos,
     DualAsymmetric,
     About,
-    TextContent
+    TextContent,
+    ImageCarousel
 }
