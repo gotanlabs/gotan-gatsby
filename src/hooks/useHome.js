@@ -72,6 +72,8 @@ const useHome = () => {
                     }
                   }
                 }
+                bannerStyle
+                backgroundColor
                 title
               }
               ... on SanityLogos {
