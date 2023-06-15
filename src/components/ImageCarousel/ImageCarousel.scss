@@ -1,0 +1,61 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.image-carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+
+    .carousel-wrapper {
+        display: flex;
+        animation: carousel-animation 20s infinite linear;
+    }
+
+    .carousel-slide {
+        flex: 0 0 15%;
+        width: 15%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media query image carousel mobile */
+@media (max-width: $sm-breakpoint) {
+    .image-carousel .carousel-slide {
+        flex: 0 0 50%;
+        width: 50%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+}
+/* End media query image carousel mobile */
+
+
+/* Media query Banner simple tablet */
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+    .image-carousel .carousel-slide {
+        flex: 0 0 30%;
+        width: 30%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+}
+/* End media query Banner simple tablet */

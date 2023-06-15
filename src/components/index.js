@@ -22,6 +22,7 @@ import About from "./About/About"
 import TextContent from "./TextContent/TextContent"
 import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
+import ImageCarousel from "./ImageCarousel/ImageCarousel"
 
 
 export {
@@ -46,7 +47,8 @@ export {
     DualAsymmetric,
     About,
     TextContent,
+    TextBlockList,
+    ImageCarousel,
     TextImageCategory,
     ForCompanies,
-    TextBlockList
 }
