@@ -10,7 +10,7 @@
 
     .carousel-wrapper {
         display: flex;
-        animation: carousel-animation 20s infinite linear;
+        animation: carousel-animation 30s infinite linear;
     }
 
     .carousel-slide {
@@ -45,7 +45,13 @@
         padding: 10px 10px;
         box-sizing: border-box;
     }
+
+    .section-padding {
+        padding-top: 0px !important;
+        padding-bottom: 60px !important;
+    }
 }
+
 /* End media query image carousel mobile */
 
 
@@ -57,5 +63,10 @@
         padding: 10px 10px;
         box-sizing: border-box;
     }
+    .section-padding {
+        padding-top: 0px !important;
+        padding-bottom: 60px !important;
+    }
 }
+
 /* End media query Banner simple tablet */
