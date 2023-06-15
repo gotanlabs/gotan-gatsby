@@ -9,7 +9,7 @@ import TextExample from "./TextExample/TextExample"
 import Home from "./Home/Home"
 import Banner from "./Banner/Banner"
 import TextBlock from "./TextBlock/TextBlock"
-import TextImage from "./TextImage/TextImage"
+import TextImageCategory from "./TextImageCategory/TextImageCategory"
 import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
 import AnimatedAccordion from "./AnimatedAccordion/AnimatedAccordion"
@@ -20,6 +20,7 @@ import BannerSimple from "./BannerSimple/BannerSimple"
 import Logos from "./Logos/Logos"
 import About from "./About/About"
 import TextContent from "./TextContent/TextContent"
+import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 
 
@@ -35,7 +36,6 @@ export {
     Home,
     Banner,
     TextBlock,
-    TextImage,
     CustomSection,
     Seo,
     AnimatedAccordion,
@@ -46,5 +46,7 @@ export {
     DualAsymmetric,
     About,
     TextContent,
+    TextImageCategory,
+    ForCompanies,
     TextBlockList
 }
