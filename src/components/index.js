@@ -21,6 +21,8 @@ import Logos from "./Logos/Logos"
 import About from "./About/About"
 import TextContent from "./TextContent/TextContent"
 import ForCompanies from "./ForCompanies/ForCompanies"
+import TextBlockList from "./TextBlockList/TextBlockList"
+
 
 export {
     Header,
@@ -46,4 +48,5 @@ export {
     TextContent,
     TextImageCategory,
     ForCompanies,
+    TextBlockList
 }

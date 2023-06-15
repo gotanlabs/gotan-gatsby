@@ -1,7 +1,5 @@
 import React from "react";
-import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent, TextImageCategory } from "../";
-
-
+import { TextBlock, TextImage, TextImageCarousel, AnimatedAccordion, DualAsymmetric, BannerSimple, Logos, TextButton, TextContent, TextImageCategory, TextBlockList } from "../";
 
 const CustomSection = ({ sections }) => {
   
@@ -89,8 +87,14 @@ const CustomSection = ({ sections }) => {
         section?._type !== undefined &&
         section?._type === "textImageCategory"
       ) {
-        console.log("sections", section);
         return <TextImageCategory key={section._key} data={section} />;
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textBlockList"
+      ) {
+        return <TextBlockList key={section._key} title={section.title} blocks={section.textBlocks} titleTop={section.titleTop}/>;
       }
     }
   });
