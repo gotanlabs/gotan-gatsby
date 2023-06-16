@@ -8,7 +8,8 @@ console.log('data', data);
     return (
          <div className="textContent py-3 container">
             <div className="textContent__text">
-                <PortableText value={data._rawContent} />
+                {data !== null &&
+                <PortableText value={data._rawContent} />}
             </div>
         </div> 
     );

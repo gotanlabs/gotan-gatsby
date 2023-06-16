@@ -17,7 +17,7 @@ export function Seo(props: SeoProps) {
     <Helmet
       htmlAttributes={{ lang: siteMetadata.lang }}
       title={siteMetadata.title}
-      titleTemplate={`%s | Starter`}
+      titleTemplate={`%s | GotanLabs`}
       meta={[
         {
           name: `robots`,
@@ -58,7 +58,7 @@ export function Seo(props: SeoProps) {
       ]}
       // link={[]}
     >
-      {/* <script>{`window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 10496688,playbookUuid: '22b0382c-69e0-46d3-b626-b228698edf57',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();`}</script>
+       <script>{`window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 10496688,playbookUuid: '22b0382c-69e0-46d3-b626-b228698edf57',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();`}</script>
       <script src="https://leadbooster-chat.pipedrive.com/assets/loader.js" async> </script>
       <script
         async
@@ -69,7 +69,7 @@ export function Seo(props: SeoProps) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-HV2Q7M85VG')`}
-      </script> */}
+      </script> 
     </Helmet>
   );
 }
