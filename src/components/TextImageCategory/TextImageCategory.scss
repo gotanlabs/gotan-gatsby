@@ -8,11 +8,10 @@
   border-radius: 12px;
   padding: 0 15px 10px;
   justify-content: space-between; 
-  align-items: center;
+  align-items: flex-start;
 }
 
 .textContainer{
-  padding: 0px 40px;
   width: 100%;
   &__category{
     display: inline-block;
@@ -28,8 +27,16 @@
 }
 .true{
   flex-direction: row-reverse;
-  padding: 0px 40px;
 }
+
+.falseText{
+  padding-right: 40px;
+}
+
+.trueText{
+  padding-left: 40px;
+}
+
 
 @media (max-width: $sm-breakpoint) {
   .textImage {

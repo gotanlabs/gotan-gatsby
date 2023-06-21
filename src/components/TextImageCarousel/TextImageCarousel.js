@@ -41,14 +41,16 @@ const TextImageCarousel = ({ slides }) => {
             {slides.map((slide, index) => (
               <div key={index} className="carouselContainer">
                 <div className="carouselContainer_image">
+                  {slide.image !== null &&
                   <SanityImage
                     {...slide.image.image}
                     alt={`${slide.image.alt}`}
-                  />
+                  /> }
                 </div>
                 <div className="carouselContainer_text">
-                  <div className="body-large">
-                    <PortableText value={slide.textBlock?._rawContent} />
+                  <div className="body-large"> 
+                  {slide.textBlock && 
+                    <PortableText value={slide.textBlock?._rawContent} /> }
                   </div>
                   <small>{slide.textBlock?.title} </small>
                 </div>

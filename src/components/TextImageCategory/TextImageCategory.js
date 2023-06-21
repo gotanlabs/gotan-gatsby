@@ -4,12 +4,12 @@ import SanityImage from "gatsby-plugin-sanity-image";
 import "./TextImageCategory.scss";
 
 const TextImageCategory = ({ data }) => {
-  console.log("TIC", data)
+
   return (
     <>
       {(
         <div className={`textImage container ${data.textRight}`}>
-          <div className="textContainer">
+          <div className={`textContainer ${data.textRight}Text`}>
             {data.category && <p className="textContainer__category">{data.category}</p>}
             {data.textBlock.title && <h3 className="textContainer__title">{data.textBlock.title}</h3>}
             <PortableText value={data.textBlock._rawContent} />

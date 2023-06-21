@@ -18,11 +18,12 @@ const Header = () => {
         <Navbar key={expand} expand={expand} className="mb-3 pt-4">
           <Container>
             <Link href="/">
-              <SanityImage
+              {data.logo !== null &&  <SanityImage
                 {...data.logo.image}
                 alt={`${data.logo.alt}`}
                 className="header__logo"
-              />
+              />}
+             
             </Link>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -32,11 +33,12 @@ const Header = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  {data.logo !== null && 
                   <SanityImage
                     {...data.logo.image}
                     alt={`${data.logo.alt}`}
                     className="header__logo"
-                  />
+                  />}
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
