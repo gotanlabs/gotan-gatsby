@@ -22,7 +22,7 @@ import TextContent from "./TextContent/TextContent"
 import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 import ImageCarousel from "./ImageCarousel/ImageCarousel"
-import forDevelopers from "./ForDevelopers/ForDevelopers"
+import ForDevelopers from "./ForDevelopers/ForDevelopers"
 
 
 export {
@@ -50,5 +50,5 @@ export {
     ImageCarousel,
     TextImageCategory,
     ForCompanies,
-    forDevelopers,
+    ForDevelopers,
 }

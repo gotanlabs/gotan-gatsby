@@ -4,7 +4,7 @@ import SanityImage from "gatsby-plugin-sanity-image";
 import "./TextImageCategory.scss";
 
 const TextImageCategory = ({ data }) => {
-  console.log("TIC", data)
+
   return (
     <>
       {(

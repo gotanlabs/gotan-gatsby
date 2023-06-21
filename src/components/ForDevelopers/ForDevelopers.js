@@ -1,8 +1,8 @@
 import React from "react";
-import useForDevelopers from "../../hooks/useForDevelopers";
+import useForDevelopers from "../../hooks/useForDevelopers"
 import {Seo, CustomSection} from "../";
 
-const forDevelopers = () => {
+const ForDevelopers = () => {
   const data = useForDevelopers().sanityForDevelopers;
 
   return <>
@@ -16,4 +16,4 @@ const forDevelopers = () => {
   </>
 };
 
-export default forDevelopers;
+export default ForDevelopers;
