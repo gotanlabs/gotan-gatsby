@@ -9,23 +9,20 @@ const ImageCarousel = ({ data }) => {
 
   return (
     <div className="image-carousel section-padding">
-      <div>
-        <div className="carousel-wrapper">
-          {firstLineSlides.map((slide, index) => (
-            <div className="carousel-slide" key={slide._key + index}>
-              <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
-            </div>
-          ))}
-        </div>
+      <div className="carousel-wrapper">
+        {firstLineSlides.map((slide, index) => (
+          <div className="carousel-slide" key={slide._key + index}>
+            <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
+          </div>
+        ))}
       </div>
-      <div>
-        <div className="carousel-wrapper">
-          {secondLineSlides.map((slide, index) => (
-            <div className="carousel-slide" key={slide._key + index}>
-              <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
-            </div>
-          ))}
-        </div>
+
+      <div className="carousel-wrapper wrapper-second-line">
+        {secondLineSlides.map((slide, index) => (
+          <div className="carousel-slide" key={slide._key + index}>
+            <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
+          </div>
+        ))}
       </div>
     </div>
   );

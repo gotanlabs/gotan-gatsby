@@ -1,21 +1,28 @@
 @import "../../styles/colors";
 @import "../../styles/text";
 @import "../../styles/global";
+  
 
 .image-carousel {
     overflow: hidden;
     width: 100%;
-    max-width: 100%;
     position: relative;
 
     .carousel-wrapper {
         display: flex;
-        animation: carousel-animation 20s infinite linear;
+    }
+
+    .carousel-wrapper .carousel-slide {
+        animation: carousel-animation 15s infinite linear;
+    }
+
+    .wrapper-second-line .carousel-slide {
+        animation-delay: 1s;
     }
 
     .carousel-slide {
-        flex: 0 0 15%;
-        width: 15%;
+        flex: 0 0 25%;
+        width: 25%;
         padding: 10px 10px;
         box-sizing: border-box;
 
@@ -23,8 +30,11 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
+            max-height: 250px; 
+            object-fit: cover;
         }
     }
+    
 }
 
 @keyframes carousel-animation {
@@ -33,7 +43,7 @@
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-400%);
     }
 }
 
@@ -48,7 +58,6 @@
 }
 /* End media query image carousel mobile */
 
-
 /* Media query Banner simple tablet */
 @media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
     .image-carousel .carousel-slide {
@@ -58,4 +67,3 @@
         box-sizing: border-box;
     }
 }
-/* End media query Banner simple tablet */
