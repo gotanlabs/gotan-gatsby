@@ -9,20 +9,20 @@ const TextImageCategory = ({ data }) => {
     <>
       {(
         <div className={`textImage container ${data.textRight}`}>
-          <div className={`textContainer ${data.textRight}Text`}>
+          <div className={`textContainer ${data.textRight}Text col-lg-6 col-md-6 col-12`}>
             {data.category && <p className="textContainer__category">{data.category}</p>}
             {data.textBlock.title && <h3 className="textContainer__title">{data.textBlock.title}</h3>}
             <PortableText value={data.textBlock._rawContent} />
           </div>
 
-          <div className="textImage__content">
-            <div className="textImage__text">
+          <div className="picture col-lg-6 col-md-6 col-12">
+           
               {data.image && <SanityImage
                 {...data.image.image}
                 alt={`${data.image.alt}`}
-                className="textImage__image"
+               
               />}
-            </div>
+           
           </div>
         </div>
       )}

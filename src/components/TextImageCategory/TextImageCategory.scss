@@ -1,20 +1,34 @@
 @import "../../styles/global";
+@import "../../styles/text";
 
 .textImage {
   display: flex;
   background: $bg-gray-elevation-1;
   color: $color-text-primary;
   margin: 1.5rem 0;
+  margin-top: 60px;
   border-radius: 12px;
   padding: 0 15px 10px;
   justify-content: space-between; 
   align-items: flex-start;
+  .picture{
+    img{
+      display: flex;
+    align-items: flex-start;
+    max-height: 500px;
+  }}
+  
+
 }
 
 .textContainer{
   width: 100%;
+  
+  
   &__category{
     display: inline-block;
+    font-weight: 500;
+    font-size:24px;
     background-color: $color-secondary;
     border: solid 1px black;
     border-radius: 8px;
@@ -30,11 +44,11 @@
 }
 
 .falseText{
-  padding-right: 40px;
+  padding-right: 10px;
 }
 
 .trueText{
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
 
@@ -42,9 +56,16 @@
   .textImage {
     display: flex;
     flex-direction: column-reverse;
+  .picture{
+    display: flex;
+    justify-content: center;
+    img{
+    max-height: 250px;
+   
+
+  }} 
   }
   .textContainer{
-    padding: 0px 10px;
     &__category{
       padding: 8px;
       margin-top: 15px;
@@ -59,13 +80,22 @@
 @media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
   .textImage {
     display: flex;
-    flex-direction: column-reverse;
+    align-items: flex-start;  
+    .picture{
+      display: flex;
+      
+    align-items: flex-start;
+      img{ 
+        display: flex;
+        align-items: flex-start;  
+        max-height: 500px; 
+    }}
+    
   }
   .textContainer{
     padding: 0px 10px;
     &__category{
-      padding: 8px;
-      margin-top: 15px;
+      padding: 8px;  
       display: block;
 
     }
