@@ -1,6 +1,5 @@
 import SanityImage from "gatsby-plugin-sanity-image";
 import React from "react";
-import { PortableText } from "@portabletext/react";
 import "./DualAsymmetric.scss";
 
 const DualAsymmetric = ({
@@ -10,27 +9,28 @@ const DualAsymmetric = ({
     <div className={` DualAsymmetric py-3 py-md-5`}>
       <div
         className={`container dualContainer ${
-          bannerStyle == "asymmetricImageLeft" ? "flex-row-reverse" : ""
+          bannerStyle === "asymmetricImageLeft" ? "flex-row-reverse" : ""
         }`}
       >
         <div
           className={`titleContainer ${
-            bannerStyle == "asymmetricImageRight" ||
-            bannerStyle == "asymmetricImageLeft"
+            bannerStyle === "asymmetricImageRight" ||
+            bannerStyle === "asymmetricImageLeft"
               ? "col-lg-9 col-md-9 col-12"
               : "col-6 me-2"
           } ${backgroundColor}`}
         >
-          <h1 className="titleDual">{title}</h1>
+          {title !== null && <h1 className="titleDual">{title}</h1> }
+          
         </div>
         {image && (
           <div
             className={`asymmetricImage ${
-              bannerStyle == "asymmetricImageRight" ||
-              bannerStyle == "asymmetricImageLeft"
+              bannerStyle === "asymmetricImageRight" ||
+              bannerStyle === "asymmetricImageLeft"
                 ? "col-3"
                 : "col-6 ms-2"
-            } ${bannerStyle == "asymmetricImageRight" && "ms-3"} ${bannerStyle == "asymmetricImageLeft" && "me-3"}`}
+            } ${bannerStyle === "asymmetricImageRight" && "ms-3"} ${bannerStyle === "asymmetricImageLeft" && "me-3"}`}
             style={{ backgroundColor: "#14D3FC" }}
           >
             <SanityImage {...image.image} alt={image.alt} />

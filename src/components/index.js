@@ -7,7 +7,6 @@ import MaterialIcon from "./Icons/MetertialIcon"
 import CustomLink from "./CustomLink/CustomLink"
 import TextExample from "./TextExample/TextExample"
 import Home from "./Home/Home"
-import Banner from "./Banner/Banner"
 import TextBlock from "./TextBlock/TextBlock"
 import TextImageCategory from "./TextImageCategory/TextImageCategory"
 import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
@@ -23,6 +22,7 @@ import TextContent from "./TextContent/TextContent"
 import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 import ImageCarousel from "./ImageCarousel/ImageCarousel"
+import ForDevelopers from "./ForDevelopers/ForDevelopers"
 
 
 export {
@@ -35,7 +35,6 @@ export {
     TextExample,
     Icon,
     Home,
-    Banner,
     TextBlock,
     CustomSection,
     Seo,
@@ -51,4 +50,5 @@ export {
     ImageCarousel,
     TextImageCategory,
     ForCompanies,
+    ForDevelopers,
 }

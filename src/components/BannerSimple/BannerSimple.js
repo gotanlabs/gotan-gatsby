@@ -19,7 +19,10 @@ const BannerSimple = ({ data }) => {
       </div>
       <div className="bannerSimple-text-button">
         <div className="title-bannerSimple">
-        <h1>{data.textIcon.title}</h1>
+        {(
+          data.textIcon.title !== null   && <h1>{data.textIcon.title}</h1>
+          )}
+        
         {data.textIcon.icon !== null && <Icon className="icon-title-bannerSimple" code={data.textIcon.icon.icon}></Icon>}
         </div>
         <div className="button-bannerSimple">
