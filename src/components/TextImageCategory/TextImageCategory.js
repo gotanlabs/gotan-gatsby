@@ -14,8 +14,7 @@ const TextImageCategory = ({ data }) => {
             {data.textBlock.title && <h3 className="textContainer__title">{data.textBlock.title}</h3>}
             <PortableText value={data.textBlock._rawContent} />
           </div>
-
-          <div className="picture col-lg-6 col-md-6 col-12">
+          <div className={`picture ${data.textRight}Picture col-lg-6 col-md-6 col-12`}>
            
               {data.image && <SanityImage
                 {...data.image.image}
