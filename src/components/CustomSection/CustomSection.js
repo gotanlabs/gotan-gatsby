@@ -9,8 +9,8 @@ import {
   Logos,
   TextButton,
   TextContent,
-  TextImageCategory, 
   TextBlockList,
+  TextImageCategoryArray
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
@@ -112,9 +112,10 @@ const CustomSection = ({ sections }) => {
       if (
         section?._type !== null &&
         section?._type !== undefined &&
-        section?._type === "textImageCategory"
+        section?._type === "textImageCategoryArray"
       ) {
-        return <TextImageCategory key={section._key} data={section} />;
+        return <TextImageCategoryArray key={section._key}
+        sections={section.sections} />;
       }
       if (
         section?._type !== null &&

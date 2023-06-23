@@ -8,7 +8,7 @@ import CustomLink from "./CustomLink/CustomLink"
 import TextExample from "./TextExample/TextExample"
 import Home from "./Home/Home"
 import TextBlock from "./TextBlock/TextBlock"
-import TextImageCategory from "./TextImageCategory/TextImageCategory"
+import TextImageCategoryArray from "./TextImageCategoryArray/TextImageCategoryArray"
 import TextImageCarousel from "./TextImageCarousel/TextImageCarousel"
 import CustomSection from "./CustomSection/CustomSection"
 import AnimatedAccordion from "./AnimatedAccordion/AnimatedAccordion"
@@ -48,7 +48,8 @@ export {
     TextContent,
     TextBlockList,
     ImageCarousel,
-    TextImageCategory,
+    TextImageCategoryArray,
     ForCompanies,
     ForDevelopers,
+
 }
