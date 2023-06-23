@@ -107,37 +107,41 @@ const useForCompanies = () => {
             _type
             _rawContent
           }
-          ... on SanityTextImageCategory {
+           ... on SanityTextImageCategoryArray {
+        _key
+        _type
+        sections {
+          _key
+          _type
+          category
+          image {
             _key
-            _type
-            category
+            alt
             image {
-              _key
-              alt
-              image {
-                asset {
-                  _id
-                }
-                crop {
-                  bottom
-                  left
-                  right
-                  top
-                }
-                hotspot {
-                  height
-                  width
-                  x
-                  y
-                }
+              asset {
+                _id
+              }
+              crop {
+                top
+                right
+                left
+                bottom
+              }
+              hotspot {
+                y
+                x
+                width
+                height
               }
             }
-            textBlock {
-              _rawContent
-              title
-            }
-            textRight
           }
+          textBlock {
+            _rawContent
+            title
+          }
+          textRight
+        }
+      }
         }
         descriptionPage
         titlePage
