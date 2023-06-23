@@ -4,9 +4,9 @@ import "./TextContent.scss";
 
 
 const TextContent = ({ data }) => {
-console.log('data', data);
+
     return (
-         <div className="textContent py-3 container">
+         <div className="textContent section-padding container">
             <div className="textContent__text">
                 {data !== null &&
                 <PortableText value={data._rawContent} />}

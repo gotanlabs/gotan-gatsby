@@ -46,6 +46,11 @@ h2{
   font-weight: 500;
 }
 
+h4{
+  font-size: 32px;
+  font-weight: 500;
+}
+
 .body-large, .body-large>* {
   font-family: $secondary-font;
   font-size: 20px !important;
@@ -74,5 +79,8 @@ small {
   }
   h2 {
     font-size: 64px;
+  }
+  h4 {
+    font-size: 36px;
   }
 }
