@@ -34,7 +34,6 @@
 
 .button-bannerSimple.dark{
   margin-top: 20px;
-  margin-left: 24px;
   .custom-link {
     border: white solid 2px;
     background-color: black;
@@ -177,6 +176,9 @@
 @media (min-width: $lg-breakpoint) {
   .button-bannerSimple.dark{
     margin-top: 0px;
+  }
+  .button-bannerSimple .custom-link .icon {
+    padding-left: 8px;
   }
 }
 /* End media query btn get in touch mobile */
