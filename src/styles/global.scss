@@ -1,13 +1,13 @@
 @import  'colors','text','reset';
 
 .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 @media (min-width: $md-breakpoint) {
     .section-padding {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
