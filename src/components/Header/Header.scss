@@ -34,7 +34,9 @@
 
   .navbar-collapse {
     order: 2;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 16px;
+
   }
 
   .navbar-nav {
@@ -95,7 +97,13 @@
 
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    justify-content: flex-start;
     font-size: 20px;
+    .nav-link{
+    padding-left: 12px;
+    padding-right: 12px;
+    }
+    
   }
 }
 
