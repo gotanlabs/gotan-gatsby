@@ -10,7 +10,7 @@ const TextImageCategoryArray = ({ sections }) => {
     <div className="container section-padding textImageContainer">
 
       {sections.map((data, index) => (
-        <div key={`data-${data.title}`} className={`textImage ${data.textRight}`}>
+        <div key={`data-${data.title}`} className={`textImage ${data.textRight}`}  id={data?.category}>
        <div className={`textContainer ${data.textRight}Text ${!data.category && 'textContainerCentered'} col-lg-6 col-md-6 col-12`}>
             {data.category && <p className={`textContainer__category ${(index % 3 === 0 ) ? 'firstColor' : index % 3 === 1 ? 'secondColor' : 'thirdColor'} 
            
