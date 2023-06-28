@@ -1,0 +1,100 @@
+@import "../../styles/global";
+@import "../../styles/text";
+
+.StringsColorsBlockontainer{
+    background: #F8F8F6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+    .desktopSize{
+        display: none;
+    }
+    .title{
+        font-size: 24px;  
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .keyWordsContainer{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        justify-content: space-between;
+       
+        .keyWords{
+            padding: 8px 12px;
+            margin-right: 0 10px 0 10px;
+            gap: 8px;
+            background: #FFFFFF;
+            border: 1.5px solid #000000;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 135%;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .keywordImage {
+            height: 42px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1.5px solid #000000;
+        }
+        .keyWordsSpacingRight{
+            margin-right: 10px;
+        }
+        .keyWordsSpacingLeft{
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (min-width: $md-breakpoint) {
+    .StringsColorsBlockontainer{
+     
+        .smallSize{
+            display: none;
+        }
+        .desktopSize{
+            display: flex;
+            flex-direction: column;
+            .keyContainer{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .keyWordsContainer{
+                    
+                    margin-bottom: 10px;
+                    justify-content: space-between;
+                   
+                    .keyWords{
+                        padding: 8px 12px;
+                        margin-right: 0 10px 0 10px;
+                        gap: 8px;
+                        background: #FFFFFF;
+                        border: 1.5px solid #000000;
+                        border-radius: 8px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 135%;
+                        text-align: center;
+                        white-space: nowrap;
+                    }
+                    .keywordImage {
+                        width: 30%;
+                        object-fit: contain;
+                        height: 42px;     
+                        border-radius: 8px;
+                        border: 1.5px solid #000000;
+                    }
+                   
+                }
+            }
+          
+        }
+    }
+  }
+  
