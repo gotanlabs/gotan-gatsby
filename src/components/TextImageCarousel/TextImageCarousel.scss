@@ -1,6 +1,11 @@
 @import "../../styles/global";
 
 .carouselWrapper {
+  h4{
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
   background-color: #f8f8f6;
   .carouselContainer {
     display: flex;
@@ -43,7 +48,7 @@
       margin: 0 auto;
       flex-direction: row;
       &_image {
-        height: 450px;
+        height: 300px;
         width: 40%;
       }
       &_text {
