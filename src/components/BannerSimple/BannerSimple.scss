@@ -55,7 +55,7 @@
 .image-bannerSimple {
   position: relative;
   width: 100%;
-  height: 355px;
+  height: 200px;
   border-radius: 16px;
   border: solid 1px black;
   margin: 0 auto;
@@ -64,7 +64,7 @@
 
 .bannerSimple-text-button {
   position: absolute;
-  top: 180px;
+  top: 20px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -79,7 +79,7 @@
 @media (max-width: $sm-breakpoint) {
   .bannerSimple-text-button {
     position: absolute;
-    top: 180px;
+    top: 20px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -131,7 +131,7 @@
   
   .bannerSimple-text-button {
     position: absolute;
-    top: 180px;
+    top: 20px;
     left: 0;
     right: 0;
     bottom: 0;
