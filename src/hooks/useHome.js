@@ -133,6 +133,7 @@ const useHome = () => {
               ... on SanityTextImageCarousel {
                 _key
                 _type
+                title
                 slides {
                   image {
                     alt
