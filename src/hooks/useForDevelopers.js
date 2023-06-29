@@ -5,6 +5,15 @@ const useForDevelopers = () => {
     {
       sanityForDevelopers {
         dinamicContent {
+          ... on SanityScrollTextBlocks {
+            _key
+            _type
+            title
+            textBlocks {
+              title
+              _rawContent
+            }
+          }
             ... on SanityDualAsymmetric {
                 _key
                 _type

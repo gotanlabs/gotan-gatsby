@@ -1,0 +1,81 @@
+@import "../../styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.absolute-div {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 100%;
+    width: 100px;
+    // background-color: aquamarine;
+    .sticky-div {
+        position: sticky;
+        background-color: $color-tertiary;
+        width: 320px;
+        top: 50%;
+        left: 0;
+        border: 1px solid black;
+        padding: 30px;
+    }
+}
+
+.timeline {
+  height: 150px;
+  width: 2px;
+  background-color: #e5e5e5;
+  margin: 3px;
+}
+
+
+.stub2 {
+  height: 300px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.circleWrapper {
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  top: -80%;
+  left: 150%;
+  min-width: 450px;
+}
+
+.description {
+  position: absolute;
+  top: 30%;
+  left: 150%;
+  min-width: 350px;
+  font-size: 14px;
+  color: #737373;
+}
+
+.sticky-div {
+  position: relative;
+  /* styles for the div in its original position */
+}
+
+.sticky-div.fixed {
+  position: sticky;
+  bottom: 0;
+  /* styles for the div when it becomes sticky */
+}
