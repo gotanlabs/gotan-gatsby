@@ -60,7 +60,7 @@ const CustomSection = ({ sections }) => {
           <TextImageCarousel
             key={section._key}
             slides={section.slides}
-            title={section.textBlock?.title}
+            title={section.title}
             text={section.textBlock?._rawContent}
           />
         );
@@ -114,6 +114,7 @@ const CustomSection = ({ sections }) => {
       ) {
         return <TextContent key={section._key} data={section} />;
       }
+
       if (
         section?._type !== null &&
         section?._type !== undefined &&
@@ -123,9 +124,11 @@ const CustomSection = ({ sections }) => {
           <TextImageCategoryArray
             key={section._key}
             sections={section.sections}
+            title={section.title}
           />
         );
       }
+
       if (
         section?._type !== null &&
         section?._type !== undefined &&
@@ -181,60 +184,3 @@ const CustomSection = ({ sections }) => {
 };
 
 export default CustomSection;
-
-
-// const Time = ({ setObserver, callback, blocks, title }) => {
-//   const [messages, setMessages] = useState([]);
-//   const [descriptions, setDescriptions] = useState([]);
-
-//   const timelineRefs = useRef([]);
-//   const circleRefs = useRef([]);
-
-//   const handleCallback = (index) => {
-//     setMessages((prevMessages) => {
-//       const updatedMessages = [...prevMessages];
-//       updatedMessages[index] = blocks[index].title;
-//       return updatedMessages;
-//     });
-
-//     setDescriptions((prevDescriptions) => {
-//       const updatedDescriptions = [...prevDescriptions];
-//       updatedDescriptions[index] = blocks[index].title;
-//       return updatedDescriptions;
-//     });
-
-//     callback();
-//   };
-
-//   useEffect(() => {
-//     timelineRefs.current = timelineRefs.current.slice(0, blocks.length);
-//     circleRefs.current = circleRefs.current.slice(0, blocks.length);
-
-//     setObserver(timelineRefs.current);
-//     circleRefs.current.forEach((circleRef, index) => {
-//       setObserver(circleRef, () => handleCallback(index));
-//     });
-//   }, [blocks, setObserver]);
-
-//   return (
-//     <div className="wrapper container">
-//       <div className="absolute-div">
-//         <h4 className="sticky-div">{title}</h4>
-//       </div>
-//       {blocks.map((block, index) => (
-//         <React.Fragment key={index}>
-//           <div ref={(ref) => (timelineRefs.current[index] = ref)} className="timeline" />
-//           <div className="circleWrapper">
-//             <div ref={(ref) => (circleRefs.current[index] = ref)} className="circle">
-//               {index + 1}
-//             </div>
-//             <div className="message body-large">{messages[index]}</div>
-//             <div className="description">{descriptions[index]}</div>
-//           </div>
-//         </React.Fragment>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Timeline;

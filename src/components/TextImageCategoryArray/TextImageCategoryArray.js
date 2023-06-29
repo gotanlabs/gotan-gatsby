@@ -3,12 +3,12 @@ import { PortableText } from "@portabletext/react";
 import SanityImage from "gatsby-plugin-sanity-image";
 import "./TextImageCategoryArray.scss";
 
-const TextImageCategoryArray = ({ sections }) => {
-  
+const TextImageCategoryArray = ({ sections, title }) => {
+ 
 
   return (
     <div className="container section-padding textImageContainer">
-
+      {title && <h2>{title}</h2>}
       {sections.map((data, index) => (
         <div key={`data-${data.title}`} className={`textImage ${data.textRight}`}  id={data?.category}>
        <div className={`textContainer ${data.textRight}Text ${!data.category && 'textContainerCentered'} col-lg-6 col-md-6 col-12`}>

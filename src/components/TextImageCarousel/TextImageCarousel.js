@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import { RiArrowRightFill } from "react-icons/ri";
 import { RiArrowLeftFill } from "react-icons/ri";
 
-const TextImageCarousel = ({ slides }) => {
+const TextImageCarousel = ({ slides, title }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -28,6 +28,7 @@ const TextImageCarousel = ({ slides }) => {
     <>
       <div className="carouselWrapper section-padding">
         <div className="container">
+          <h4>{title}</h4>
           <Carousel
             showStatus={false}
             showThumbs={false}
