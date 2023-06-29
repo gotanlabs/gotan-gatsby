@@ -9,15 +9,17 @@
 .sectionContainer {
   margin-bottom: 20px;
   padding: 20px;
-  border: 2px solid $color-black;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
   border-radius: 8px;
   .body-large {
     margin-bottom: 15px;
     display: flex;
+    width: max-content;
+
     div{
       width: max-content;
       height: fit-content;
-      border: 1.5px solid $color-black;
+      box-shadow: 0 4px 7px rgba(0,0,0,.7);
       border-radius: 8px;
       padding: 2px 7px;
       background-color: $color-white;
