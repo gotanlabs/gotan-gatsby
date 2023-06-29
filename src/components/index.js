@@ -23,6 +23,8 @@ import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 import ImageCarousel from "./ImageCarousel/ImageCarousel"
 import ForDevelopers from "./ForDevelopers/ForDevelopers"
+import ContactUs from "./ContactUs/ContactUs"
+import Apply from "./Apply/Apply"
 
 
 export {
@@ -51,5 +53,7 @@ export {
     TextImageCategoryArray,
     ForCompanies,
     ForDevelopers,
+    ContactUs,
+    Apply
 
 }
