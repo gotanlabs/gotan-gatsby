@@ -1,0 +1,188 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.title-bannerSimple {
+  display: flex;
+  flex-direction: row;
+
+  .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+}
+
+.button-bannerSimple {
+  width: fit-content;
+  .custom-link {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    box-shadow: 0 4px 7px rgba(0,0,0,.7);
+    background-color: white;
+    color: black !important;
+    padding: 10px;
+    &:hover {
+      transform: scale(.94);
+    }
+
+    .icon {
+      border-left: solid 1px black;
+      margin-left: 5px;
+    }
+  }
+}
+
+.button-bannerSimple.dark{
+  margin-top: 20px;
+  .custom-link {
+    border: white solid 2px;
+    background-color: black;
+    color: white !important;
+    margin-left: 7px;
+
+    .icon {
+      border-left: solid 1px white;
+    }
+  }
+}
+
+.bannerSimple-container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.image-bannerSimple {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bannerSimple-text-button {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  }
+
+/* Media query Banner simple mobile */
+@media (max-width: $sm-breakpoint) {
+  .bannerSimple-text-button {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
+  }
+  .bannerSimple-container {
+    width: 95%;
+  }
+
+  .title-bannerSimple {
+    padding-bottom: 20px;
+  }
+
+  .title-bannerSimple .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 80%;
+  }
+
+  .custom-link p {
+    font-family: Figtree, sans-serif;
+    white-space: nowrap;
+    padding: 0px 15px;
+    margin: 0 auto;
+  }
+
+  .button-bannerSimple .custom-link .icon {
+    border-left: solid 1px black;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+
+  .button-bannerSimple.dark {
+    margin-top: 20px;
+    margin-left: 0px;
+    width: 100%;
+}
+}
+/* End media query Banner simple mobile */
+
+/* Media query Banner simple tablet */
+@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+  
+  .bannerSimple-text-button {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
+  }
+  .bannerSimple-container {
+    width: 95%;
+  }
+
+  .title-bannerSimple {
+    padding-bottom: 20px;
+  }
+
+  .title-bannerSimple .icon {
+    font-size: 40px;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 100%;
+  }
+
+  .custom-link p {
+    font-family: Figtree, sans-serif;
+    white-space: nowrap;
+    padding: 0px 15px;
+  }
+
+  .button-bannerSimple .custom-link .icon {
+    border-left: solid 1px black;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+}
+/* End media query Banner simple tablet */
+
+
+/* Media query btn get in touch mobile */
+@media (min-width: $lg-breakpoint) {
+  .button-bannerSimple.dark{
+    margin-top: 0px;
+  }
+  .button-bannerSimple .custom-link .icon {
+    padding-left: 8px;
+  }
+}
+/* End media query btn get in touch mobile */
+

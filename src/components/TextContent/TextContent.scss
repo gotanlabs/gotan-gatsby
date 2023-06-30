@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.textContent {
+    font-family: $primary-font;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 95%;
+    margin-left: 24px;
+
+    p{
+        line-height: 50px;
+        font-size: 36px;
+    }
+}
+
+/* Media query text mobile */
+@media (max-width: $md-breakpoint) {
+    .textContent {
+        width: 95%;
+        margin-left: 0px;
+        p{
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+/* End media text simple mobile */
+
+/* Media query text tablet */
+@media (max-width: $lg-breakpoint) {
+    .textContent{
+        font-size: 36px;
+        line-height: 50px;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+/* End media query text tablet */

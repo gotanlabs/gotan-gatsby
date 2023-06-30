@@ -1,8 +1,13 @@
 @import  'colors','text','reset';
 
-// breakpoints
-$sm-breakpint: 576px;
-$md-breakpoint: 768px;
-$lg-breakpoint: 992px;
-$xl-breakpoint: 1200px;
-$xxl-breakpoint: 1400px;
+.section-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (min-width: $md-breakpoint) {
+    .section-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

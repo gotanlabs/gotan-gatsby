@@ -1,10 +1,31 @@
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+// breakpoints
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$xxl-breakpoint: 1400px;
 
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
-$primary-font: "Ubuntu", sans-serif;
-$secondary-font: "Roboto", sans-serif;
+/* Gotan fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*
+font-family: 'Figtree', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/*
+font-family: 'Space Grotesk', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/*
+font-family: 'Inter', sans-serif;
+*/
+
+$primary-font: 'Space Grotesk', sans-serif;
+$secondary-font: "Figtree", sans-serif;
 
 h1,
 h2,
@@ -17,79 +38,49 @@ h6 {
 
 p {
   font-family: $secondary-font;
+  font-size: 18px;
 }
 
-.body-large {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
-.body-medium {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.25px;
-}
-.body-small {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.4px;
+h2{
+  font-size: 48px;
+  font-weight: 500;
 }
 
-.label-large {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.1px;
-}
-.label-medium {
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-}
-.label-small {
-  font-size: 10px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-}
-
-.title-large {
-  font-size: 22px;
-  line-height: 28px;
-}
-.title-medium {
-  font-size: 16px;
-  line-height: 24px;
-}
-.title-small {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.headline-large {
+h4{
   font-size: 32px;
-  line-height: 40px;
-  font-weight: 300;
-}
-.headline-medium {
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 300;
-}
-.headline-small {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
-.display-large {
-  font-size: 57px;
-  line-height: 64px;
-  letter-spacing: -0.25px;
+.body-large, .body-large>* {
+  font-family: $secondary-font;
+  font-size: 20px !important;
+  line-height: 31px;
 }
-.display-medium {
-  font-size: 45px;
-  line-height: 52px;
+
+small {
+  font-size: 14px;
+  line-height: 16px;
 }
-.display-small {
-  font-size: 36px;
-  line-height: 44px;
+
+.label-small, .label-small>* {
+  font-size: 12px;
+}
+
+@media (min-width: $md-breakpoint) {
+  small {
+    font-size: 16px;
+  }
+  
+  .body-large, .body-large>* {
+    font-size: 24px !important;
+  }
+  .label-small, .label-small>* {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h4 {
+    font-size: 36px;
+  }
 }

@@ -1,0 +1,180 @@
+@import "../../styles/global";
+@import "../../styles/text";
+
+.textImageContainer .textImage:first-child {
+margin-top: 0;
+}
+
+.textImage {
+  display: flex;
+  background: $bg-gray-elevation-1;
+  color: $color-text-primary;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 60px;
+  .picture {
+    height: 500px;
+    img {
+      display: flex;
+      align-items: flex-start;
+      height: 80%;
+      width: 80%;
+      object-fit: cover;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-left: auto;
+    }
+  }
+  .truePicture {
+    img {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  .smallerPicture {
+    height: 350px;
+    img {
+      border: none;
+    }
+  }
+}
+
+
+
+
+.textContainer {
+  width: 100%;
+   
+  .firstColor{
+    background-color: $color-secondary;
+  }
+
+  .secondColor{
+    background-color: $color-primary;
+  }
+
+  .thirdColor{
+    background-color: $color-tertiary;
+  }
+
+  &__category {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 24px;
+    
+    border: solid 1px black;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin: 10px 0px;
+  }
+}
+.textContainerCentered {
+  margin: auto;
+}
+.true {
+  flex-direction: row-reverse;
+}
+
+.falseText {
+  padding-right: 10px;
+}
+
+.trueText {
+  padding-left: 10px;
+}
+
+@media (max-width: $sm-breakpoint) {
+  .textImage {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 30px;
+    .picture {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      img {
+        max-height: 250px;
+        width: 100%;
+      }
+    }
+  }
+  .textContainer {
+    &__category {
+      padding: 8px;
+      margin-top: 15px;
+      display: block;
+    }
+    &__title {
+      margin: 10px 0px;
+    }
+  }
+  .trueText {
+    padding-left: 0px;
+  }
+}
+@media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+  .textImage {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding: 0;
+    .picture {
+      display: flex;
+      height: 500px;
+
+      align-items: flex-start;
+      img {
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .smallerPicture {
+      height: 350px;
+    }
+  }
+  .textContainer {
+    padding: 0px 10px;
+    &__category {
+      padding: 8px;
+      display: block;
+    }
+    &__title {
+      margin: 10px 0px;
+    }
+  }
+
+}
+
+@media (max-width: $md-breakpoint) {
+  .textImage {
+    display: flex;
+    flex-direction: column-reverse;
+    .picture {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      img {
+        max-height: 200px;
+        width: 100%;
+      }
+    }
+  }
+  .textContainer {
+    &__category {
+      padding: 8px;
+      margin-top: 15px;
+      display: block;
+    }
+    &__title {
+      margin: 10px 0px;
+    }
+  }
+  .trueText {
+    padding-left: 0px;
+  }
+}
