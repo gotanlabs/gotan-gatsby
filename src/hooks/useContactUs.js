@@ -1,12 +1,17 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-const useHome = () => {
+const useContactUs = () => {
   return useStaticQuery(graphql`
     {
-        sanityHome {
+        sanityContactUs {
             titlePage
             descriptionPage
             dinamicContent {
+              ... on SanityTextContent {
+                _key
+                _type
+                _rawContent
+              }
               ... on SanityBannerSimple {
                 _key
                 _type
@@ -120,49 +125,6 @@ const useHome = () => {
                   title
                 }
               }
-              ... on SanityAnimatedAccordion {
-                _key
-                _type
-                title
-                summary
-                sections {
-                  title
-                  _rawContent
-                }
-              }
-              ... on SanityTextImageCarousel {
-                _key
-                _type
-                title
-                slides {
-                  image {
-                    alt
-                    image {
-                      hotspot {
-                        y
-                        x
-                        width
-                        height
-                      }
-                      crop {
-                        top
-                        right
-                        left
-                        bottom
-                      }
-                      asset {
-                        _id
-                      }
-                    }
-                  }
-                  textBlock {
-                    title
-                    _rawContent
-                  }
-                  _type
-                }
-              }
-
               ... on SanityTextImage {
                 _key
                 _type
@@ -201,4 +163,4 @@ const useHome = () => {
   `)
 }
 
-export default useHome
+export default useContactUs

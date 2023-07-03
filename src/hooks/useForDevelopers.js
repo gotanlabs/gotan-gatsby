@@ -1,10 +1,86 @@
 import { useStaticQuery, graphql } from "gatsby"
-
 const useForDevelopers = () => {
   return useStaticQuery(graphql`
     {
       sanityForDevelopers {
         dinamicContent {
+          ... on SanityStringsColorsBlock {
+            _key
+            _type
+            keyWords
+            title
+          }
+          ... on SanityTextImageButton {
+            _key
+            _type
+            button {
+              link {
+                url
+                text
+              }
+              title
+              _type
+            }
+            image {
+              _key
+              alt
+              image {
+                hotspot {
+                  y
+                  x
+                  width
+                  height
+                }
+                asset {
+                  _id
+                }
+                crop {
+                  top
+                  right
+                  left
+                  bottom
+                }
+              }
+            }
+            textBlock {
+              _key
+              _type
+              _rawContent
+              title
+            }
+          }
+          ... on SanityTextImageCarousel {
+            _key
+            _type
+            title
+            slides {
+              image {
+                alt
+                image {
+                  hotspot {
+                    y
+                    x
+                    width
+                    height
+                  }
+                  crop {
+                    top
+                    right
+                    left
+                    bottom
+                  }
+                  asset {
+                    _id
+                  }
+                }
+              }
+              textBlock {
+                title
+                _rawContent
+              }
+              _type
+            }
+          }
             ... on SanityDualAsymmetric {
                 _key
                 _type
@@ -52,6 +128,7 @@ const useForDevelopers = () => {
               ... on SanityTextImageCategoryArray {
                 _key
                 _type
+                title
                 sections {
                   _key
                   _type
@@ -84,47 +161,10 @@ const useForDevelopers = () => {
                   textRight
                 }
               }
-              
             }
             titlePage
-      }
-      ... on SanityTextImageButton {
-        _key
-        _type
-        button {
-          link {
-            text
-            url
-          }
-          title
-        }
-        image {
-          alt
-          image {
-            asset {
-              _id
-            }
-            crop {
-              bottom
-              left
-              right
-              top
-            }
-            hotspot {
-              height
-              width
-              x
-              y
-            }
-          }
-        }
-        textBlock {
-          _rawContent
-          title
-        }
       }
     }
   `)
 }
-
 export default useForDevelopers

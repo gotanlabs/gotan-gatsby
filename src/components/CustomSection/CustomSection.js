@@ -58,7 +58,7 @@ const CustomSection = ({ sections }) => {
           <TextImageCarousel
             key={section._key}
             slides={section.slides}
-            title={section.textBlock?.title}
+            title={section.title}
             text={section.textBlock?._rawContent}
           />
         );
@@ -118,7 +118,7 @@ const CustomSection = ({ sections }) => {
         section?._type === "textImageCategoryArray"
       ) {
         return <TextImageCategoryArray key={section._key}
-        sections={section.sections} />;
+        sections={section.sections} title={section.title}/>;
       }
       if (
         section?._type !== null &&
