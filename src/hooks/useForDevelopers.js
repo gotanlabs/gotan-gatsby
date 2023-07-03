@@ -88,6 +88,41 @@ const useForDevelopers = () => {
             }
             titlePage
       }
+      ... on SanityTextImageButton {
+        _key
+        _type
+        button {
+          link {
+            text
+            url
+          }
+          title
+        }
+        image {
+          alt
+          image {
+            asset {
+              _id
+            }
+            crop {
+              bottom
+              left
+              right
+              top
+            }
+            hotspot {
+              height
+              width
+              x
+              y
+            }
+          }
+        }
+        textBlock {
+          _rawContent
+          title
+        }
+      }
     }
   `)
 }

@@ -23,7 +23,7 @@ import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 import ImageCarousel from "./ImageCarousel/ImageCarousel"
 import ForDevelopers from "./ForDevelopers/ForDevelopers"
-
+import textImageButton from "./TextImageButton/textImageButton"
 
 export {
     Header,
@@ -51,5 +51,5 @@ export {
     TextImageCategoryArray,
     ForCompanies,
     ForDevelopers,
-
+    textImageButton,
 }

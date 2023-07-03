@@ -1,0 +1,104 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.textImageButton-container {
+  background-color: #CCFF00;
+  height: 782px;
+  width: 100%;
+  padding: 48px, 16px, 48px, 16px;
+  margin: 0 ;
+
+  .textImageButton-image {
+    padding-top: 40px;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+  
+    .image{
+      width: 100%;
+      object-fit: cover;
+      height: 250px;
+      border: 2px solid black;
+      border-radius: 16px;
+    }
+  }
+
+  .textImageButton-content{
+    width: 100%;
+    height: 462px;
+    
+    &__button{
+      width: fit-content;
+      padding: 32px 0;
+      .custom-link{
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 10px;
+        border: black solid 2px;
+        background-color: black;
+        color: white !important;
+        padding: 10px;
+      }
+      .custom-link p{
+        font-family: $secondary-font;
+        white-space: nowrap;
+        padding: 0px 15px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .body-large{
+    h1{
+      font-size: 36px;
+      padding: 15px 0;
+      font-family:$secondary-font;
+    }
+    p{
+      font-size: 24px;
+    }
+  }
+
+}
+
+@media (min-width: $sm-breakpoint){
+  .textImageButton-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    
+
+    
+    
+
+    .textImageButton-image{
+      height: 550px;
+      width: 400px;
+      padding: 0;
+      display: inline-block;
+
+
+
+      
+      .image{
+        height: 500px;
+
+      }
+
+    }
+    .textImageButton-content{
+      width: 40%;
+      display: inline-block;
+      padding-left: 30px;
+      
+    }
+
+  .container{
+    margin: 25px 25px;
+    padding: 12px 12px;
+  }
+  }
+
+}
