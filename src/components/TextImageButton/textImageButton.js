@@ -11,13 +11,6 @@ const TextImageButton = ({ data }) => {
 
     <div className="textImageButton-container mb-5">
       <div className="container">
-        <div className="textImageButton-image">
-          {(
-            data.image.image !== null ? <SanityImage
-              {...data.image.image}
-              alt={`${data.image.alt}`} className="image"/> : <></>
-          )}
-        </div>
         <div className="textImageButton-content body-large">
           <div className="textImageButton-content__title">
             {(
@@ -37,6 +30,13 @@ const TextImageButton = ({ data }) => {
               text={data.button.link.text} /> : <></>
             )}
           </div>
+        </div>
+        <div className="textImageButton-image">
+          {(
+            data.image.image !== null ? <SanityImage
+              {...data.image.image}
+              alt={`${data.image.alt}`} className="image"/> : <></>
+          )}
         </div>
       </div>
     </div>);
