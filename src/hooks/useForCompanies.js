@@ -110,6 +110,7 @@ const useForCompanies = () => {
            ... on SanityTextImageCategoryArray {
         _key
         _type
+        title
         sections {
           _key
           _type

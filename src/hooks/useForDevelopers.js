@@ -50,6 +50,39 @@ const useForDevelopers = () => {
               title
             }
           }
+          ... on SanityTextImageCarousel {
+            _key
+            _type
+            title
+            slides {
+              image {
+                alt
+                image {
+                  hotspot {
+                    y
+                    x
+                    width
+                    height
+                  }
+                  crop {
+                    top
+                    right
+                    left
+                    bottom
+                  }
+                  asset {
+                    _id
+                  }
+                }
+              }
+              textBlock {
+                title
+                _rawContent
+              }
+              _type
+            }
+          }
+
             ... on SanityDualAsymmetric {
                 _key
                 _type
@@ -97,6 +130,7 @@ const useForDevelopers = () => {
               ... on SanityTextImageCategoryArray {
                 _key
                 _type
+                title
                 sections {
                   _key
                   _type
