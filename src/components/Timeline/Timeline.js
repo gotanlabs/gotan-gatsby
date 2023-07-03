@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Timeline.scss";
-
+import { PortableText } from "@portabletext/react";
 
 const Timeline = ({ setObserver, callback, blocks, title }) => {
-
-  
   const [message1, setMessage1] = useState("");
   const [message2, setMessage2] = useState("");
   const [message3, setMessage3] = useState("");
@@ -18,22 +16,21 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
   const circle1 = useRef(null);
   const circle2 = useRef(null);
   const circle3 = useRef(null);
-  const divRef = useRef(null);
 
   const someCallback = () => {
     setMessage1(blocks[0].title);
-    setDescription1(blocks[0].title);
+    setDescription1(blocks[0]._rawContent);
     callback();
   };
 
   const someCallback2 = () => {
     setMessage2(blocks[1].title);
-    setDescription2(blocks[1].title);
+    setDescription2(blocks[1]._rawContent);
   };
 
   const someCallback3 = () => {
     setMessage3(blocks[2].title);
-    setDescription3(blocks[2].title);
+    setDescription3(blocks[2]._rawContent);
   };
 
   useEffect(() => {
@@ -47,7 +44,7 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
 
   return (
     <div className="wrapper container">
-      <div ref={divRef} className="absolute-div">
+      <div className="absolute-div">
         <h4 className="sticky-div">{title}</h4>
       </div>
       <div id="timeline1" ref={timeline1} className="timeline" />
@@ -56,7 +53,9 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
           1
         </div>
         <div className="message body-large">{message1}</div>
-        <div className="description">{description1}</div>
+        <div className="description">
+          <PortableText value={description1} />
+        </div>
       </div>
       <div id="timeline2" ref={timeline2} className="timeline" />
       <div className="circleWrapper">
@@ -64,7 +63,10 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
           2
         </div>
         <div className="message body-large">{message2}</div>
-        <div className="description">{description2}</div>
+        <div className="description">
+          {" "}
+          <PortableText value={description2} />
+        </div>
       </div>
       <div id="timeline3" ref={timeline3} className="timeline" />
       <div className="circleWrapper">
@@ -72,11 +74,13 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
           3
         </div>
         <div className="message body-large">{message3}</div>
-        <div className="description">{description3}</div>
+        <div className="description">
+          {" "}
+          <PortableText value={description3} />
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default Timeline;

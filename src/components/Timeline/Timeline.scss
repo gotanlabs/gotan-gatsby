@@ -46,8 +46,12 @@
   color: white;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid #e5e5e5;
 }
+
+.circle::after {
+    border: 2px solid black;
+  }
 
 .circleWrapper {
   position: relative;
@@ -67,6 +71,9 @@
   min-width: 350px;
   font-size: 14px;
   color: #737373;
+  p {
+    font-size: 14px !important;
+  }
 }
 
 .sticky-div {
