@@ -8,7 +8,7 @@ const StringsColorsBlock = ({ data }) => {
   return (
     <div className="container section-padding StringsColorsBlockontainer">
       <div className="smallSize col-12">
-        {data.title && <div className="title">{data.title}</div>}
+        {data.title && <h4 className="title">{data.title}</h4>}
         <div className="keyContainer">
         {data.keyWords.map((data, index) => (
           <div
@@ -30,18 +30,29 @@ const StringsColorsBlock = ({ data }) => {
         </div>
       </div>
       <div className="desktopSize col-12"> 
-      {data.title && <div className="title">{data.title}</div>}
+      {data.title && <h4 className="title">{data.title}</h4>}
       <div  className={`keyContainer`}>
-        {data.keyWords.map((data, index) => (
-          <div className={`keyWordsContainer`} >
-              {index === 0 ? <img className="keywordImage"  src={frameLightBlue} alt="frame" /> : index === 3 ? <img className="keywordImage"  src={framePink} alt="frame" /> : ""}
-            <div
-              className={`keyWords`}
-            >
-              {data}
-            </div>
-          </div>
-        ))}.
+        <div className={`keyWordsContainer`} >
+          <img className="keywordImage keyWordsSpacingRight"  src={frameLightBlue} alt="frame" />
+          {data.keyWords.slice(0,2).map((data, index) => (
+              <div className={`keyWords ${
+                index === 0 ? "keyWordsSpacingRight" : ""
+              }`} >
+                {data}
+              </div>
+          ))}
+        </div>
+
+        <div className={`keyWordsContainer`} >
+          {data.keyWords.slice(2).map((data, index) => (
+              <div className={`keyWords ${
+                index === 0 ? "keyWordsSpacingRight" : ""
+              }`} >
+                {data}
+              </div>
+          ))}
+          <img className="keywordImage keyWordsSpacingLeft"  src={frameLightBlue} alt="frame" />
+        </div>
         </div>
       </div>
     </div>
