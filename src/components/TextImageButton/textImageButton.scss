@@ -6,17 +6,21 @@
   background-color: #CCFF00;
   height: 782px;
   width: 100%;
-  padding: 48px, 16px, 48px, 16px;
-  margin: 0 ;
+  padding: 40px 0px;
+  margin: 0 auto;
+  display: flex;
+  
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   .textImageButton-image {
-    padding-top: 40px;
     width: 100%;
     height: max-content;
     position: relative;
-    flex-direction: column;
     display: flex;
-  
+    
     .image{
       width: 100%;
       object-fit: cover;
@@ -29,18 +33,20 @@
   .textImageButton-content{
     width: 100%;
     height: 462px;
-    
+    position:relative;
+    display: flex;
+    flex-direction: column;
+
     &__button{
       width: fit-content;
       padding: 32px 0;
       .custom-link{
-        display: flex;
-        flex-direction: row-reverse;
         border-radius: 10px;
         border: black solid 2px;
         background-color: black;
         color: white !important;
         padding: 10px;
+
       }
       .custom-link p{
         font-family: $secondary-font;
@@ -67,37 +73,30 @@
   .textImageButton-container{
     display: flex;
     flex-direction:column;
-    justify-content: space-around;
-    
 
-    
-    
 
     .textImageButton-image{
-      height: 550px;
-      width: 400px;
-      padding: 0;
+      height: 600px;
+      width: 350px;
+      padding-top: 30px;
+      padding-left: 30px;
       display: inline-block;
-
-
 
       
       .image{
-        height: 500px;
+        height: 600px;
 
       }
 
     }
     .textImageButton-content{
-      width: 40%;
+      width: 45%;
       display: inline-block;
-      padding-left: 30px;
       
     }
 
   .container{
-    margin: 25px 25px;
-    padding: 12px 12px;
+    display:inline-block;
   }
   }
 

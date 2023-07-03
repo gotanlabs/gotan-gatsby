@@ -9,7 +9,7 @@ const TextImageButton = ({ data }) => {
   console.log("text", data)
   return (
 
-    <div className="textImageButton-container mb-5">
+    <div className="textImageButton-container section-padding">
       <div className="container">
         <div className="textImageButton-content body-large">
           <div className="textImageButton-content__title">
@@ -31,7 +31,7 @@ const TextImageButton = ({ data }) => {
             )}
           </div>
         </div>
-        <div className="textImageButton-image">
+        <div className="textImageButton-image col-6">
           {(
             data.image.image !== null ? <SanityImage
               {...data.image.image}
