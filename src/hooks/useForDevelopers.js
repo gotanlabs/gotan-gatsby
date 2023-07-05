@@ -5,6 +5,51 @@ const useForDevelopers = () => {
     {
       sanityForDevelopers {
         dinamicContent {
+          ... on SanityStringsColorsBlock {
+            _key
+            _type
+            keyWords
+            title
+          }
+          ... on SanityTextImageButton {
+            _key
+            _type
+            button {
+              link {
+                url
+                text
+              }
+              title
+              _type
+            }
+            image {
+              _key
+              alt
+              image {
+                hotspot {
+                  y
+                  x
+                  width
+                  height
+                }
+                asset {
+                  _id
+                }
+                crop {
+                  top
+                  right
+                  left
+                  bottom
+                }
+              }
+            }
+            textBlock {
+              _key
+              _type
+              _rawContent
+              title
+            }
+          }
           ... on SanityTextImageCarousel {
             _key
             _type
