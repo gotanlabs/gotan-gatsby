@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TimelineObserver from "react-timeline-animation";
 import {
   TextBlock,
   TextImage,
@@ -11,12 +12,11 @@ import {
   TextContent,
   TextBlockList,
   TextImageCategoryArray,
-Timeline
+  Timeline,
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import TextImageButton from "../TextImageButton/textImageButton";
 import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
-
 
 const CustomSection = ({ sections }) => {
   const [message, setMessage] = useState("");
@@ -198,7 +198,5 @@ const CustomSection = ({ sections }) => {
   });
   return <>{sectionResult}</>;
 };
-
-
 
 export default CustomSection;
