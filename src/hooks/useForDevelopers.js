@@ -1,5 +1,4 @@
 import { useStaticQuery, graphql } from "gatsby"
-
 const useForDevelopers = () => {
   return useStaticQuery(graphql`
     {
@@ -82,7 +81,6 @@ const useForDevelopers = () => {
               _type
             }
           }
-
             ... on SanityDualAsymmetric {
                 _key
                 _type
@@ -163,12 +161,10 @@ const useForDevelopers = () => {
                   textRight
                 }
               }
-              
             }
             titlePage
       }
     }
   `)
 }
-
 export default useForDevelopers

@@ -2,7 +2,7 @@ import React from "react";
 import "./StringsColorsBlock.scss";
 import frameLightBlue from "../../images/frameLightBlue.svg";
 import framePink from "../../images/framePink.svg";
-import frame74 from "../../images/frame74.png";
+
 import frameGreen from "../../images/frameGreen.svg";
 import frameLightBlueSmall from "../../images/frameLightBlueSmall.svg";
 
@@ -56,7 +56,7 @@ const StringsColorsBlock = ({ data }) => {
               </div>
           ))}
           <div className="imageContainer keyWordsSpacingLeft">
-            <img className="keywordImage"  src={frame74} alt="frame" />
+            <img className="keywordImage"  src={framePink} alt="frame" />
           </div>
           
         </div>

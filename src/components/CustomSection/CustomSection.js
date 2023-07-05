@@ -10,9 +10,12 @@ import {
   TextButton,
   TextContent,
   TextBlockList,
-  TextImageCategoryArray
+  TextImageCategoryArray,
+
+
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
+import TextImageButton from "../TextImageButton/textImageButton";
 import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
 
 
@@ -140,6 +143,14 @@ const CustomSection = ({ sections }) => {
       ) {
         return <ImageCarousel key={section._key} data={section} />;
       }
+
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImageButton"
+      ) {
+        return <TextImageButton key={section._key} data={section} />;
+      }
     }
     if (
       section?._type !== null &&
@@ -151,5 +162,7 @@ const CustomSection = ({ sections }) => {
   });
   return <>{sectionResult}</>;
 };
+
+
 
 export default CustomSection;
