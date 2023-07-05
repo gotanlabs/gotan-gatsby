@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import TimelineObserver from "react-timeline-animation";
 import {
   TextBlock,
   TextImage,
@@ -11,16 +12,18 @@ import {
   TextContent,
   TextBlockList,
   TextImageCategoryArray,
-
-
+  Timeline,
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import TextImageButton from "../TextImageButton/textImageButton";
 import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
 
-
 const CustomSection = ({ sections }) => {
-  
+  const [message, setMessage] = useState("");
+
+  const onCallback = () => {
+    console.log("awesome");
+  };
   const sectionResult = sections.map((section) => {
     {
       if (
@@ -113,14 +116,21 @@ const CustomSection = ({ sections }) => {
       ) {
         return <TextContent key={section._key} data={section} />;
       }
+
       if (
         section?._type !== null &&
         section?._type !== undefined &&
         section?._type === "textImageCategoryArray"
       ) {
-        return <TextImageCategoryArray key={section._key}
-        sections={section.sections} title={section.title}/>;
+        return (
+          <TextImageCategoryArray
+            key={section._key}
+            sections={section.sections}
+            title={section.title}
+          />
+        );
       }
+
       if (
         section?._type !== null &&
         section?._type !== undefined &&
@@ -147,6 +157,32 @@ const CustomSection = ({ sections }) => {
       if (
         section?._type !== null &&
         section?._type !== undefined &&
+        section?._type === "scrollTextBlocks"
+      ) {
+        return (
+          <>
+            {" "}
+            <TimelineObserver
+              key={section._key}
+              initialColor="#e5e5e5"
+              fillColor="black"
+              handleObserve={(setObserver) => (
+                <Timeline
+                  callback={onCallback}
+                  className="timeline"
+                  setObserver={setObserver}
+                  title={section.title}
+                  blocks={section.textBlocks}
+                />
+              )}
+            />
+            <div className="stub2">{message}</div>
+          </>
+        );
+      }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
         section?._type === "textImageButton"
       ) {
         return <TextImageButton key={section._key} data={section} />;
@@ -162,7 +198,5 @@ const CustomSection = ({ sections }) => {
   });
   return <>{sectionResult}</>;
 };
-
-
 
 export default CustomSection;
