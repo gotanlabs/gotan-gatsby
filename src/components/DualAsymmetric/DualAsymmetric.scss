@@ -34,9 +34,9 @@
     position: relative;
     .titleDual{
       position: absolute;
-      bottom: 20px;
+      bottom: 50px;
       padding-left: 15%;
-      padding-bottom: 30px;
+      padding-bottom: 50px;
       width: 80%;
       font-weight: 500;
       font-size: 72px;
@@ -51,7 +51,7 @@
       height: 100%;
       width: 100%;
       border-radius: 20px;
-      object-fit: cover;
+      object-fit: fill;
     }
   }
 }
@@ -85,12 +85,9 @@
 @media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint){
 
 
-  .DualAsymmetric .dualContainer .asymmetricImage img{
-    display: none;
-  }
 
   .DualAsymmetric .dualContainer .titleContainer .titleDual {
-    font-size: 50px;
+    font-size: 72px;
     width: 100%;
     padding-left: 5%;
   }

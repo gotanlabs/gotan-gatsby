@@ -1,5 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby";
 const useForDevelopers = () => {
   return useStaticQuery(graphql`
     {
@@ -12,6 +11,51 @@ const useForDevelopers = () => {
             textBlocks {
               title
               _rawContent
+            }
+          }
+          ... on SanityStringsColorsBlock {
+            _key
+            _type
+            keyWords
+            title
+          }
+          ... on SanityTextImageButton {
+            _key
+            _type
+            button {
+              link {
+                url
+                text
+              }
+              title
+              _type
+            }
+            image {
+              _key
+              alt
+              image {
+                hotspot {
+                  y
+                  x
+                  width
+                  height
+                }
+                asset {
+                  _id
+                }
+                crop {
+                  top
+                  right
+                  left
+                  bottom
+                }
+              }
+            }
+            textBlock {
+              _key
+              _type
+              _rawContent
+              title
             }
           }
           ... on SanityTextImageCarousel {
@@ -46,93 +90,90 @@ const useForDevelopers = () => {
               _type
             }
           }
-
-            ... on SanityDualAsymmetric {
-                _key
-                _type
-                image {
-                  alt
-                  image {
-                    asset {
-                      _id
-                    }
-                    crop {
-                      top
-                      right
-                      left
-                      bottom
-                    }
-                    hotspot {
-                      y
-                      x
-                      width
-                      height
-                    }
-                  }
+          ... on SanityDualAsymmetric {
+            _key
+            _type
+            image {
+              alt
+              image {
+                asset {
+                  _id
                 }
-                title
-                backgroundColor
-                bannerStyle
-              }
-              ... on SanityTextBlockList {
-                _key
-                _type
-                textBlocks {
-                  _key
-                  _type
-                  _rawContent
-                  title
+                crop {
+                  top
+                  right
+                  left
+                  bottom
                 }
-                title
-                titleTop
-              }
-              ... on SanityTextContent {
-                _key
-                _type
-                _rawContent
-              }
-              ... on SanityTextImageCategoryArray {
-                _key
-                _type
-                title
-                sections {
-                  _key
-                  _type
-                  category
-                  image {
-                    _key
-                    alt
-                    image {
-                      asset {
-                        _id
-                      }
-                      crop {
-                        top
-                        right
-                        left
-                        bottom
-                      }
-                      hotspot {
-                        y
-                        x
-                        width
-                        height
-                      }
-                    }
-                  }
-                  textBlock {
-                    _rawContent
-                    title
-                  }
-                  textRight
+                hotspot {
+                  y
+                  x
+                  width
+                  height
                 }
               }
-              
             }
-            titlePage
+            title
+            backgroundColor
+            bannerStyle
+          }
+          ... on SanityTextBlockList {
+            _key
+            _type
+            textBlocks {
+              _key
+              _type
+              _rawContent
+              title
+            }
+            title
+            titleTop
+          }
+          ... on SanityTextContent {
+            _key
+            _type
+            _rawContent
+          }
+          ... on SanityTextImageCategoryArray {
+            _key
+            _type
+            title
+            sections {
+              _key
+              _type
+              category
+              image {
+                _key
+                alt
+                image {
+                  asset {
+                    _id
+                  }
+                  crop {
+                    top
+                    right
+                    left
+                    bottom
+                  }
+                  hotspot {
+                    y
+                    x
+                    width
+                    height
+                  }
+                }
+              }
+              textBlock {
+                _rawContent
+                title
+              }
+              textRight
+            }
+          }
+        }
+        titlePage
       }
     }
-  `)
-}
-
-export default useForDevelopers
+  `);
+};
+export default useForDevelopers;

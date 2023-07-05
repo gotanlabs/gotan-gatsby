@@ -11,10 +11,12 @@ import {
   TextContent,
   TextBlockList,
   TextImageCategoryArray,
-  Timeline,
+Timeline
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
-import TimelineObserver from "react-timeline-animation";
+import TextImageButton from "../TextImageButton/textImageButton";
+import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
+
 
 const CustomSection = ({ sections }) => {
   const [message, setMessage] = useState("");
@@ -178,9 +180,25 @@ const CustomSection = ({ sections }) => {
           </>
         );
       }
+      if (
+        section?._type !== null &&
+        section?._type !== undefined &&
+        section?._type === "textImageButton"
+      ) {
+        return <TextImageButton key={section._key} data={section} />;
+      }
+    }
+    if (
+      section?._type !== null &&
+      section?._type !== undefined &&
+      section?._type === "stringsColorsBlock"
+    ) {
+      return <StringsColorsBlock key={section._key} data={section} />;
     }
   });
   return <>{sectionResult}</>;
 };
+
+
 
 export default CustomSection;
