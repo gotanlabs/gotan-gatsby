@@ -2,7 +2,9 @@ import React from "react";
 import "./StringsColorsBlock.scss";
 import frameLightBlue from "../../images/frameLightBlue.svg";
 import framePink from "../../images/framePink.svg";
+import frame74 from "../../images/frame74.png";
 import frameGreen from "../../images/frameGreen.svg";
+import frameLightBlueSmall from "../../images/frameLightBlueSmall.svg";
 
 const StringsColorsBlock = ({ data }) => {
   return (
@@ -17,7 +19,7 @@ const StringsColorsBlock = ({ data }) => {
             }
         }`}
           >
-            <img className="keywordImage"  src={index % 3 === 0? frameLightBlue : index % 3 === 1 ? framePink : frameGreen } alt="frame" />
+            <img className="keywordImage"  src={index % 4 === 0? frameLightBlue : index % 4 === 1 ? framePink : index % 4 === 2 ? frameGreen : frameLightBlueSmall } alt="frame" />
             <div
               className={`keyWords ${
                 index % 2 === 1 ? "keyWordsSpacingRight" : "keyWordsSpacingLeft"
@@ -33,7 +35,9 @@ const StringsColorsBlock = ({ data }) => {
       {data.title && <h4 className="title">{data.title}</h4>}
       <div  className={`keyContainer`}>
         <div className={`keyWordsContainer`} >
-          <img className="keywordImage keyWordsSpacingRight"  src={frameLightBlue} alt="frame" />
+          <div className="imageContainer keyWordsSpacingRight">
+            <img className="keywordImage"  src={frameLightBlue} alt="frame" />
+          </div> 
           {data.keyWords.slice(0,2).map((data, index) => (
               <div className={`keyWords ${
                 index === 0 ? "keyWordsSpacingRight" : ""
@@ -51,7 +55,10 @@ const StringsColorsBlock = ({ data }) => {
                 {data}
               </div>
           ))}
-          <img className="keywordImage keyWordsSpacingLeft"  src={frameLightBlue} alt="frame" />
+          <div className="imageContainer keyWordsSpacingLeft">
+            <img className="keywordImage"  src={frame74} alt="frame" />
+          </div>
+          
         </div>
         </div>
       </div>
