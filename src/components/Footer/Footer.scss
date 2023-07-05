@@ -14,8 +14,12 @@
     font-size: 14px;
     text-decoration: none;
     &:hover {
-      color: $color-link-active;
+      color: black;
+      font-weight: 500;
+     
     }
+    
+    
   }
   font-family: $primary-font;
   &__down {

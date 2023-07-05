@@ -16,6 +16,7 @@ import {
 } from "../";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import TextImageButton from "../TextImageButton/textImageButton";
+import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
 
 
 const CustomSection = ({ sections }) => {
@@ -150,6 +151,13 @@ const CustomSection = ({ sections }) => {
       ) {
         return <TextImageButton key={section._key} data={section} />;
       }
+    }
+    if (
+      section?._type !== null &&
+      section?._type !== undefined &&
+      section?._type === "stringsColorsBlock"
+    ) {
+      return <StringsColorsBlock key={section._key} data={section} />;
     }
   });
   return <>{sectionResult}</>;

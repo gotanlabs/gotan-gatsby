@@ -36,7 +36,7 @@
     position:relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15px;
+
     
     &__button{
       width: fit-content;
@@ -71,12 +71,12 @@
   .body-large{
     h1{
       font-size: 36px;
-      padding: 15px 0;
+      padding: 25px 0;
       font-family:$secondary-font;
     }
     p{
       font-size: 24px;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
     }
   }
 
@@ -86,35 +86,32 @@
   .textImageButton-container{
     align-items: center;
 
-
     .textImageButton-image{
-      height: 550px;
+      height: 500px;
       width: 50%;
       padding-left: 30px;
-      display: inline-block;
       position: relative;
-      padding-top: 25px;
 
 
       
       .image{
-        height: 550px;
-        position: absolute;
+        height: 500px;
+
       }
 
     }
     .textImageButton-content{
       width: 50%;
-      display: inline-block;
-      
-
-      
-      
+      display: flex;
+      justify-content: flex-end;
+    
     }
 
   .container{
-    display:inline-block;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    
 
   }
   }
@@ -125,11 +122,14 @@
   .textImageButton-container{
     align-items: center;
 
-    .textImageButton-content{
-      padding-right: 0px;
+    .textImageButton-image{
+      height: 600px;
+      .image{
+        height: 600px;
+      }
     }
-    .container{
-      padding-top: 80px;
+    .textImageButton-content{
+      padding-right: 70px;
     }
   }
 }

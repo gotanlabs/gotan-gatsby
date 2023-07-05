@@ -9,7 +9,6 @@ const TextImageButton = ({ data }) => {
 
   console.log("text", data)
   return (
-    // section-padding
     <div className="textImageButton-container " id={data?.textBlock?.title}>
       <div className="container">
         <div className="textImageButton-content body-large">
@@ -38,7 +37,7 @@ const TextImageButton = ({ data }) => {
 
           </div>
         </div>
-        <div className="textImageButton-image col-6">
+        <div className="textImageButton-image">
           {(
             data.image.image !== null ? <SanityImage
               {...data.image.image}
