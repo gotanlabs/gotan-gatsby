@@ -9,7 +9,7 @@ const TextImageButton = ({ data }) => {
 
   console.log("text", data)
   return (
-    <div className="textImageButton-container " id={data?.textBlock?.title}>
+    <div className="textImageButton-container " id={data?.textBlock?.title.replace(/\s/g, '')}>
       <div className="container">
         <div className="textImageButton-content body-large">
           <div className="textImageButton-content__title" >
