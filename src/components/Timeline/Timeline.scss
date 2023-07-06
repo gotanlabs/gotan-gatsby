@@ -1,0 +1,140 @@
+@import "../../styles/global";
+
+.wrapper {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.absolute-div {
+  position: absolute;
+  top: 40px;
+  left: 15%;
+  height: 100%;
+  .sticky-div {
+    position: sticky;
+    background-color: $color-tertiary;
+    width: 320px;
+    top: 50%;
+    left: 0;
+    border: 1px solid black;
+    padding: 30px;
+  }
+}
+
+.timeline {
+  height: 120px;
+  width: 2px;
+  background-color: #e5e5e5;
+  margin: 3px;
+}
+
+.timeline1 {
+  height: 50px;
+  width: 2px;
+  background-color: #e5e5e5;
+  margin: 3px;
+}
+
+.stub2 {
+  height: 150px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+}
+
+.circle::after {
+  border: 2px solid black;
+}
+
+.circleWrapper {
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  top: -80%;
+  left: 150%;
+  min-width: 450px;
+  p {
+    font-size: 14px !important;
+    color: #737373;
+    line-height: 20px;
+  }
+}
+
+.sticky-div {
+  position: relative;
+  /* styles for the div in its original position */
+}
+
+.sticky-div.fixed {
+  position: sticky;
+  bottom: 0;
+  /* styles for the div when it becomes sticky */
+}
+
+@media (max-width: $xl-breakpoint) {
+  .absolute-div {
+    left: 8%;
+  }
+  .message {
+    min-width: 350px;
+  }
+}
+
+@media (max-width: $lg-breakpoint) {
+  .absolute-div {
+    left: 1%;
+  }
+  .message {
+    min-width: 300px;
+  }
+  .timeline {
+    height: 190px;
+  }
+}
+
+@media (max-width: $md-breakpoint) {
+  .absolute-div {
+    position: relative;
+    top: 0;
+    .sticky-div{
+      width: 100%;
+    }
+  }
+  .wrapper {
+    align-items: start;
+    padding-top: 40px;
+  }
+  .message {
+    min-width: 420px;
+  }
+  .timeline {
+    height: 150px;
+    margin-left: 14px;
+  }
+  .timeline1 {
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: $sm-breakpoint) {
+  .message {
+    min-width: 290px;
+  }
+  .timeline {
+    height: 180px;
+  }
+}

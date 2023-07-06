@@ -1,0 +1,142 @@
+@import "../../styles/global";
+@import "../../styles/text";
+
+.StringsColorsBlockontainer{
+    background: #F8F8F6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+    margin-bottom: 50px;
+
+    .desktopSize{
+        display: none;
+    }
+    .title{
+        font-family: $secondary-font;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .keyWordsContainer{
+        display: inline-flex;
+        max-width: 100%;
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        .keyWords{
+            padding: 8px 12px;
+            margin-right: 0 10px 0 10px;
+            background: #FFFFFF;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 135%;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .keywordImage {
+            height: 44px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #000000;
+        }
+        .keyWordsSpacingRight{
+            margin-right: 10px;
+        }
+        .keyWordsSpacingLeft{
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (min-width: $md-breakpoint) {
+    .StringsColorsBlockontainer{
+     
+        .smallSize{
+            display: none;
+        }
+        .title{
+            font-size: 36px;   
+        }
+        .desktopSize{
+            display: flex;
+            flex-direction: column;
+            .keyContainer{
+                flex-direction: row;
+                flex-wrap: wrap;
+                .keyWordsContainer{
+                    padding-right: 20px;
+                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    justify-content: space-between;
+                   
+
+                    .imageContainer {
+                        width: 100%;
+                    }
+                    
+                    .keyWords{
+                        font-weight: 500;
+                        height: 47px;
+                    }
+
+                    .keywordImage {
+                        height: 47px;
+                        width: 100%;
+                    }
+                
+                   
+                }
+            }
+          
+        }
+    }
+  }
+  
+  @media (min-width: $lg-breakpoint) {
+    .StringsColorsBlockontainer{
+
+        .title{
+            width: 25%;   
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .desktopSize{
+            display: flex;
+            flex-direction: row;
+            .keyContainer{
+                flex-direction: row;
+                flex-wrap: wrap;
+                .keyWordsContainer{
+                    
+                    margin-bottom: 10px;
+                    justify-content: space-between;
+                   
+                    .keyWords{
+                        font-size: 22px;
+                        font-weight: 500;
+                        height: 52px;
+                    }
+
+                    .imageContainer {
+                        width: 100%;
+                    }
+
+                    .keywordImage {
+                        height: 52px;
+                        width: 100%;
+                    }
+                
+                   
+                }
+            }
+          
+        }
+    }
+  }
+  

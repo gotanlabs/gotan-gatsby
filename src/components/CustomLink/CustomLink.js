@@ -3,7 +3,7 @@ import "./CustomLink.scss"
 
 function CustomLink({href, icon, style, text}) {
     return (
-      <a href={href} title={text} className={`custom-link ${style}`}>
+      <a target= "_blank" href={href} title={text} className={`custom-link ${style}`}>
       {icon && icon}
       {style !== "icon" && <p className="mb-0">{text}</p>}
 

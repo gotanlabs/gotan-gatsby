@@ -23,6 +23,8 @@ import ForCompanies from "./ForCompanies/ForCompanies"
 import TextBlockList from "./TextBlockList/TextBlockList"
 import ImageCarousel from "./ImageCarousel/ImageCarousel"
 import ForDevelopers from "./ForDevelopers/ForDevelopers"
+import Timeline from "./Timeline/Timeline"
+import textImageButton from "./TextImageButton/textImageButton"
 import ContactUs from "./ContactUs/ContactUs"
 import Apply from "./Apply/Apply"
 
@@ -53,6 +55,8 @@ export {
     TextImageCategoryArray,
     ForCompanies,
     ForDevelopers,
+    Timeline,
+    textImageButton,
     ContactUs,
     Apply
 
