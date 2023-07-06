@@ -162,7 +162,7 @@ const CustomSection = ({ sections }) => {
         return (
           <>
             {" "}
-            <TimelineObserver
+            {typeof window !== "undefined" && <TimelineObserver
               key={section._key}
               initialColor="#e5e5e5"
               fillColor="black"
@@ -175,7 +175,7 @@ const CustomSection = ({ sections }) => {
                   blocks={section.textBlocks}
                 />
               )}
-            />
+            />}
             <div className="stub2">{message}</div>
           </>
         );
