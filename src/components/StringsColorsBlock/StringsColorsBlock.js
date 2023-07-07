@@ -1,10 +1,9 @@
 import React from "react";
 import "./StringsColorsBlock.scss";
-import frameLightBlue from "../../images/frameLightBlue.svg";
-import framePink from "../../images/framePink.svg";
-
-import frameGreen from "../../images/frameGreen.svg";
-import frameLightBlueSmall from "../../images/frameLightBlueSmall.svg";
+import blue from "../../images/blue.jpg";
+import blue2 from "../../images/blue2.jpg";
+import green from "../../images/green.jpg";
+import pink from "../../images/pink.jpg";
 
 const StringsColorsBlock = ({ data }) => {
   return (
@@ -19,7 +18,7 @@ const StringsColorsBlock = ({ data }) => {
             }
         }`}
           >
-            <img className="keywordImage"  src={index % 4 === 0? frameLightBlue : index % 4 === 1 ? framePink : index % 4 === 2 ? frameGreen : frameLightBlueSmall } alt="frame" />
+            <img className="keywordImage"  src={index % 4 === 0? blue : index % 4 === 1 ? pink : index % 4 === 2 ? green : blue2 } alt="frame" />
             <div
               className={`keyWords ${
                 index % 2 === 1 ? "keyWordsSpacingRight" : "keyWordsSpacingLeft"
@@ -36,7 +35,7 @@ const StringsColorsBlock = ({ data }) => {
       <div  className={`keyContainer`}>
         <div className={`keyWordsContainer`} >
           <div className="imageContainer keyWordsSpacingRight">
-            <img className="keywordImage"  src={frameLightBlue} alt="frame" />
+            <img className="keywordImage"  src={blue} alt="frame" />
           </div> 
           {data.keyWords.slice(0,2).map((data, index) => (
               <div className={`keyWords ${
@@ -56,7 +55,7 @@ const StringsColorsBlock = ({ data }) => {
               </div>
           ))}
           <div className="imageContainer keyWordsSpacingLeft">
-            <img className="keywordImage"  src={framePink} alt="frame" />
+            <img className="keywordImage"  src={pink} alt="frame" />
           </div>
           
         </div>
