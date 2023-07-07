@@ -3,92 +3,77 @@
 @import "../../styles/global";
 .DualAsymmetric {
   background-color: #f8f8f6;
-  .dualContainer{
+  .dualContainer {
     height: 490px;
     display: flex;
-  justify-content: space-evenly;
+    justify-content: space-evenly;
 
-
-
-  .pink{
-    background-color:#FF42D7 ;
-  }
-  .yellow{
-    background-color:#CCFF00 ;
-  }
-  .green{
-    background-color:#00ED1C ;
-  }
-  .lightblue{
-    background-color:#00D9FF;
-  }
-
-  .asymmetricImageLeftImg{
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  
-  .titleContainer{
-    box-shadow: 0 3px 6px rgba(0,0,0,.4);
-    border-radius: 20px;
-    position: relative;
-    .titleDual{
-      position: absolute;
-      bottom: 50px;
-      padding-left: 15%;
-      padding-bottom: 50px;
-      width: 80%;
-      font-weight: 500;
-      font-size: 72px;
-    line-height: 120%;
-    font-family: $primary-font;
+    .pink {
+      background-color: #ff42d7;
     }
-  }
-  .asymmetricImage {
-    box-shadow: 0 2px 5px rgba(0,0,0,.4);
-    border-radius: 20px;
-    img{
-      height: 100%;
-      width: 100%;
+    .yellow {
+      background-color: #ccff00;
+    }
+    .green {
+      background-color: #00ed1c;
+    }
+    .lightblue {
+      background-color: #00d9ff;
+    }
+
+    .asymmetricImageLeftImg {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .titleContainer {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
       border-radius: 20px;
-      object-fit: fill;
+      display: flex;
+      align-items: center;
+      h1 {
+        margin-left: 80px;
+        line-height: 120%;
+        width: 80%;
+      }
+    }
+    .asymmetricImage {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        object-fit: fill;
+      }
     }
   }
 }
-}
 
 
-@media (max-width: $sm-breakpoint){
-
-  .DualAsymmetric .dualContainer{
+@media (max-width: $md-breakpoint) {
+  .DualAsymmetric .dualContainer {
     height: auto;
-  }  
+  }
 
-  .asymmetricImage{
+  .asymmetricImage {
     display: none;
   }
 
-  .DualAsymmetric .dualContainer .titleContainer .titleDual {
-    font-size: 40px;
-    width: 90%;
-    padding-left: 5%;
-  }
-  
   .DualAsymmetric .dualContainer .titleContainer {
-    display: inline-block;
     height: 354px;
     width: 100%;
+    h1 {
+      margin-left: 10px;
+      width: 100%;
+    }
+  }
 }
 
-}
-
-@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint){
-
-
-
-  .DualAsymmetric .dualContainer .titleContainer .titleDual {
-    font-size: 72px;
-    width: 100%;
-    padding-left: 5%;
+@media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+  .DualAsymmetric .dualContainer .titleContainer {
+    h1 {
+      margin-left: 30px;
+    }
   }
 }

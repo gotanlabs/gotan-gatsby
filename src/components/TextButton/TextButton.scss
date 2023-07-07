@@ -11,16 +11,14 @@ code {
     color: #000 !important;
     font-family: $primary-font !important;
     word-wrap: break-word;
-    border: solid 4px #C6FF39 !important;
+    border: solid 3px #C6FF39 !important;
     border-radius: 10px;
     font-weight: 400;
 
     &:hover {
-        font-size: 36px !important;
-        color: #000 !important;
         word-wrap: break-word;
         background-color: #C6FF39;
-        border: solid 2px #C6FF39 !important;
+        border: solid 3px #C6FF39 !important;
         border-radius: 10px;
         font-weight: 400;
     }
@@ -50,7 +48,7 @@ code {
 }
 
 /* Media query text button mobile */
-@media (max-width: $sm-breakpoint) {
+@media (max-width: $md-breakpoint) {
     .textButton-text {
         font-size: 18px;
         width: 95%;
@@ -75,7 +73,7 @@ code {
 /* End media text button simple mobile */
 
 /* Media query text button tablet */
-@media (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint) {
+@media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
     .textButton-text {
         font-size: 18px;
         width: 100%;

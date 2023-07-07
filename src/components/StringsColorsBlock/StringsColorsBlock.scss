@@ -61,7 +61,8 @@
             display: none;
         }
         .title{
-            font-size: 36px;   
+            font-size: 36px;  
+
         }
         .desktopSize{
             display: flex;
@@ -102,9 +103,10 @@
     .StringsColorsBlockontainer{
 
         .title{
-            width: 25%;   
-            margin-left: 20px;
-            margin-right: 20px;
+            text-align: left;
+            min-width: 175px;
+            padding-left: 20px;
+            margin: auto; 
         }
         .desktopSize{
             display: flex;
