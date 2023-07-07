@@ -11,7 +11,7 @@ const TextBlockList = ({ title, blocks, titleTop }) => {
           : "textBlockList__block"
       }`}
     >
-      <div
+      <div 
         className={`body-large ${
           titleTop ? "textBlockListTop__block_title" : "textBlockList__block_title"
         }`}
@@ -28,7 +28,7 @@ const TextBlockList = ({ title, blocks, titleTop }) => {
         titleTop ? "textBlockListTop" : "textBlockList"
       }`}
     >
-      {title && <h2>{title}</h2>}
+      {title && <h2 id={`${title.replace(/\s/g, '')}`}>{title}</h2>}
       <div
         className={`${
           titleTop ? "textBlockListTop__blocks" : "textBlockList__blocks"
