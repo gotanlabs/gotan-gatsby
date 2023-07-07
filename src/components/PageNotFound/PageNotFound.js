@@ -8,8 +8,7 @@ import { RiArrowLeftFill } from "react-icons/ri";
 const PageNotFound = () => {
   
   const data = usePageNotFound().sanityPageNotFound;
-  
-    console.log(data)
+
   return (
     <div className="container pageNotFound-container mb-5">
       <div className="image-container col-12">

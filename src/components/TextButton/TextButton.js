@@ -6,7 +6,6 @@ import CustomLink from "../CustomLink/CustomLink";
 
 
 const TextButton = ({ data }) => {
-    console.log('data', data)
     return (
         <>
             <div className="background-textButton section-padding">

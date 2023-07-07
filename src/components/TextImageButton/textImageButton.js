@@ -6,7 +6,7 @@ import CustomLink from "../CustomLink/CustomLink";
 import { FaArrowRight } from "react-icons/fa";
 
 const TextImageButton = ({ data }) => {
-  console.log("text", data);
+
   return (
     <div className="textImageButton-container section-padding" id={data?.textBlock?.title.replace(/\s/g, '')}>
       <div className="container">
