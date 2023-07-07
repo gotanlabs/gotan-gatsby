@@ -30,11 +30,6 @@ const TextImageButton = ({ data }) => {
               text={data.button.link.text}
               icon={<RiArrowRightFill size={25} color="white"/>} /> : <></>
             )}
-
-              
-            
-            
-
           </div>
         </div>
         <div className="textImageButton-image">

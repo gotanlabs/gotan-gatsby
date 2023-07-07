@@ -30,12 +30,7 @@ const useForCompanies = () => {
                 }
               }
             }
-            textIcon {
-              title
-              icon {
-                icon
-              }
-            }
+            title
             iconButton {
               title
               icon {

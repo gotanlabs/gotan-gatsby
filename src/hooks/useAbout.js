@@ -44,13 +44,7 @@ const useAbout = () => {
                     }
                   }
                 }
-                textIcon {
-                  icon {
-                    icon
-                  }
-                  _key
-                  title
-                }
+                title
               }
               ... on SanityDualAsymmetric {
                 _key
