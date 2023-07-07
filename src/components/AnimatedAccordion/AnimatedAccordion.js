@@ -13,7 +13,7 @@ const AnimatedAccordion = ({ sections, summary, title }) => {
       <div className="sections">
         {sections.map((section) => (
           <div key={`section-${section.title}`} className="sectionContainer">
-            <a href={`/forCompanies/#${section.title}`} className="body-large">
+            <a href={`/forCompanies/#${section.title.replace(/\s/g, '')}`} className="body-large">
               <div>{section.title}</div>
               <div>
                 {" "}
