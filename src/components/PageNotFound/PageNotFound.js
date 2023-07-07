@@ -1,12 +1,11 @@
 import React from "react";
 import SanityImage from "gatsby-plugin-sanity-image";
 import "./PageNotFound.scss";
-import Icon from "../Icons/Icon";
 import CustomLink from "../CustomLink/CustomLink";
 import usePageNotFound from "../../hooks/usePageNotFound";
 import { RiArrowLeftFill } from "react-icons/ri";
 
-const PageNotFound = ({}) => {
+const PageNotFound = () => {
   
   const data = usePageNotFound().sanityPageNotFound;
   
