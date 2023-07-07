@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Timeline.scss";
 import { PortableText } from "@portabletext/react";
 
-const Timeline = ({ setObserver, callback, blocks, title }) => {
+const Timeline = ({ setObserver,  blocks, title }) => {
   const [message1, setMessage1] = useState("");
   const [message2, setMessage2] = useState("");
   const [message3, setMessage3] = useState("");
@@ -42,7 +42,7 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
   const someCallback = () => {
     setMessage1(blocks[0].title);
     setDescription1(blocks[0]._rawContent);
-    callback();
+    // callback();
   };
 
   const someCallback2 = () => {
@@ -174,21 +174,6 @@ const Timeline = ({ setObserver, callback, blocks, title }) => {
           <PortableText value={description8} />
         </div>
       </div>
-      {/* {blocks.length > 8 && (
-        <>
-          <div id="timeline9" ref={timeline9} className="timeline" />
-          <div className="circleWrapper">
-            <div id="circle9" ref={circle9} className="circle">
-              9
-            </div>
-            <div className="message body-large">{message9}</div>
-            <div className="description">
-              {" "}
-              <PortableText value={description9} />
-            </div>
-          </div>
-        </>
-      )} */}
     </div>
   );
 };

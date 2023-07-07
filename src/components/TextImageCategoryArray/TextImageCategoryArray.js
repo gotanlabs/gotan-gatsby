@@ -10,7 +10,7 @@ const TextImageCategoryArray = ({ sections, title }) => {
     <div className="container section-padding textImageContainer">
       {title && <h2 id={`${title.replace(/\s/g, '')}`}>{title}</h2>}
       {sections.map((data, index) => (
-        <div key={`data-${data.title}`} className={`textImage ${data.textRight}`}   style={{ marginTop: data.category ? '60px' : '0' }}>
+        <div key={`data-${data.title}`} className={`textImage ${data.textRight}`}   style={{ marginTop: data.category ? '60px' : '30p' }}>
        <div className={` textContainer ${data.textRight}Text ${!data.category && 'textContainerCentered'} col-lg-6 col-md-6 col-12`}>
             {data.category && <p className={`textContainer__category ${(index % 3 === 0 ) ? 'firstColor' : index % 3 === 1 ? 'secondColor' : 'thirdColor'} 
             `} id={`${data.category.replace(/\s/g, '')}`}>{data.category}</p>}

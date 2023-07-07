@@ -21,9 +21,7 @@ import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
 const CustomSection = ({ sections }) => {
   const [message, setMessage] = useState("");
 
-  const onCallback = () => {
-    console.log("awesome");
-  };
+
   const sectionResult = sections.map((section) => {
     {
       if (
@@ -168,7 +166,6 @@ const CustomSection = ({ sections }) => {
               fillColor="black"
               handleObserve={(setObserver) => (
                 <Timeline
-                  callback={onCallback}
                   className="timeline"
                   setObserver={setObserver}
                   title={section.title}
