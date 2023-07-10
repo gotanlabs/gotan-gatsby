@@ -14,7 +14,7 @@ const PageNotFound = () => {
       <div className="image-container col-12">
       <div className="backgroundImage">
        {(
-          data.image.image !== null ? <SanityImage
+          data.image?.image !== null ? <SanityImage
            {...data.image.image}
           alt={`${data.image.alt}`}
          /> : <></>
