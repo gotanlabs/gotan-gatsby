@@ -29,7 +29,7 @@ const BannerSimple = ({ data }) => {
         
         <div className="button-bannerSimple">
         {(
-          data.iconButton.iconbutton !== null ? <CustomLink
+          data.iconButton !== null && data.iconButton.iconbutton !== null && data.iconButton.iconbutton?.url !== null && data.iconButton.iconbutton?.text !== null && data.iconButton.icon !== null && data.iconButton.icon?.icon !== null !== null ? <CustomLink
             href={data.iconButton.iconbutton.url}
             text={data.iconButton.iconbutton.text} 
             icon={<Icon code={data.iconButton.icon.icon}></Icon>}/> : <></>
