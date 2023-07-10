@@ -41,12 +41,7 @@ const useHome = () => {
                     }
                   }
                 }
-                textIcon {
-                  icon {
-                    icon
-                  }
-                  title
-                }
+                title
               }
               ... on SanityDualAsymmetric {
                 _key

@@ -46,12 +46,7 @@ const useApply = () => {
                     }
                   }
                 }
-                textIcon {
-                  icon {
-                    icon
-                  }
-                  title
-                }
+                title
               }
               ... on SanityDualAsymmetric {
                 _key

@@ -3,10 +3,9 @@
 @import "../../styles/global";
 
 .title-bannerSimple {
-  display: flex;
-  flex-direction: row;
 
-  .icon {
+
+  svg {
     font-size: 40px;
     border: solid 2px white;
     border-radius: 10px;
@@ -23,11 +22,13 @@
     box-shadow: 0 4px 7px rgba(0,0,0,.7);
     background-color: white;
     color: black !important;
-    padding: 10px;
+    padding: 15px 20px;
+    p {
+      font-size: 20px !important;
+    }
     &:hover {
       transform: scale(.94);
     }
-
     .icon {
       border-left: solid 1px black;
       margin-left: 5px;
@@ -38,11 +39,8 @@
 .button-bannerSimple.dark{
   margin-top: 20px;
   .custom-link {
-    border: white solid 2px;
     background-color: black;
     color: white !important;
-    margin-left: 7px;
-
     .icon {
       border-left: solid 1px white;
     }
@@ -58,14 +56,16 @@
 .image-bannerSimple {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px;
   border-radius: 16px;
   box-shadow: 0 2px 5px rgba(0,0,0,.4);
-  margin: 0 auto;
-  overflow: hidden;
+  img {
+    object-fit: cover;
+  }
 }
 
 .bannerSimple-text-button {
+  padding: 0 20px;
   position: absolute;
   top: 20px;
   left: 0;
@@ -100,7 +100,7 @@
     padding-bottom: 20px;
   }
 
-  .title-bannerSimple .icon {
+  .title-bannerSimple svg {
     font-size: 40px;
     border: solid 2px white;
     border-radius: 10px;
@@ -152,12 +152,12 @@
     padding-bottom: 20px;
   }
 
-  .title-bannerSimple .icon {
+  .title-bannerSimple svg {
     font-size: 40px;
     border: solid 2px white;
     border-radius: 10px;
     margin-left: 10px;
-    height: 100%;
+    // height: 100%;
   }
 
   .custom-link p {
@@ -171,6 +171,9 @@
     margin-left: 5px;
     padding-left: 8px;
   }
+  .image-bannerSimple {
+    height: 250px;
+  }
 }
 /* End media query Banner simple tablet */
 
@@ -182,6 +185,9 @@
   }
   .button-bannerSimple .custom-link .icon {
     padding-left: 8px;
+  }
+  .image-bannerSimple {
+    height: 250px;
   }
 }
 /* End media query btn get in touch mobile */

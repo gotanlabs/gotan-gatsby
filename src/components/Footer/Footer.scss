@@ -14,20 +14,24 @@
     font-size: 14px;
     text-decoration: none;
     &:hover {
-      color: $color-link-active;
+      color: black;
+      font-weight: 500;
+     
     }
+    
+    
   }
   font-family: $primary-font;
   &__down {
     background-color: #202124;
   }
   &__logo {
-    width: 100%;
+    height: 35px;
     overflow: hidden;
     .gatsby-image-wrapper {
       max-height: 40px;
       img {
-        width: 100%;
+        height: 100%;
       }
     }
   }

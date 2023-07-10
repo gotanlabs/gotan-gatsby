@@ -1,9 +1,9 @@
 @import "../../styles/global";
 @import "../../styles/text";
 
-.textImageContainer .textImage:first-child {
-margin-top: 0;
-}
+// .textImageContainer .textImage:first-child {
+//   margin-top: 0;
+// }
 
 .textImage {
   display: flex;
@@ -17,12 +17,12 @@ margin-top: 0;
     img {
       display: flex;
       align-items: flex-start;
-      height: 80%;
-      width: 80%;
+      // height: 80%;
+      // width: 80%;
       object-fit: cover;
       border: 2px solid black;
       border-radius: 10px;
-      margin-left: auto;
+      // margin-left: auto;
     }
   }
   .truePicture {
@@ -39,21 +39,18 @@ margin-top: 0;
   }
 }
 
-
-
-
 .textContainer {
   width: 100%;
-   
-  .firstColor{
+
+  .firstColor {
     background-color: $color-secondary;
   }
 
-  .secondColor{
+  .secondColor {
     background-color: $color-primary;
   }
 
-  .thirdColor{
+  .thirdColor {
     background-color: $color-tertiary;
   }
 
@@ -61,8 +58,8 @@ margin-top: 0;
     display: inline-block;
     font-weight: 500;
     font-size: 24px;
-    
-    border: solid 1px black;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     padding: 8px;
     margin-bottom: 10px;
@@ -79,11 +76,11 @@ margin-top: 0;
 }
 
 .falseText {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .trueText {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 @media (max-width: $sm-breakpoint) {
@@ -102,13 +99,14 @@ margin-top: 0;
     }
   }
   .textContainer {
+    padding: 0px 10px;
     &__category {
       padding: 8px;
       margin-top: 15px;
       display: block;
     }
     &__title {
-      margin: 10px 0px;
+      margin: 10px 0px !important;
     }
   }
   .trueText {
@@ -138,16 +136,14 @@ margin-top: 0;
     }
   }
   .textContainer {
-    padding: 0px 10px;
     &__category {
       padding: 8px;
       display: block;
     }
     &__title {
-      margin: 10px 0px;
+      margin: 10px 0px !important;
     }
   }
-
 }
 
 @media (max-width: $md-breakpoint) {
@@ -165,16 +161,42 @@ margin-top: 0;
     }
   }
   .textContainer {
+    padding: 0;
     &__category {
       padding: 8px;
       margin-top: 15px;
       display: block;
     }
     &__title {
-      margin: 10px 0px;
+      margin: 10px 0px !important;
     }
   }
   .trueText {
-    padding-left: 0px;
+    padding-left: 0;
+  }
+  .falseText {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .picture {
+    height: 500px;
+    img {
+      height: 100%;
+      width: 90%;
+    }
+  }
+  .truePicture {
+    img {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  .falsePicture {
+    img {
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 }

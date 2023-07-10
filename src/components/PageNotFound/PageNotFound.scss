@@ -1,0 +1,108 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+
+.pageNotFound-container{
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 30px;
+ 
+   .titleImage{
+    font-family: $secondary-font;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    padding-bottom: 20px;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+   }
+
+  .image-container{
+    position: relative;
+    max-width: 1000px;
+     .backgroundImage{
+     background-color: blue($color: #000000);
+     height: 360px;
+     border-radius: 16px;
+    
+     img{
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+       border-radius: 16px;
+       border: 2px solid black
+     }
+   
+ }
+  }
+
+  .text{
+    margin: 30px 0px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .button-pageNotFound {
+        width: 100%;
+       
+         padding: 30px 0px;
+         .custom-link {
+           display: flex;
+           justify-content: space-around;
+           padding: 15px 10px;
+           flex-direction: row;
+           border-radius: 10px;
+           box-shadow: 0 4px 7px rgba(0,0,0,.7);
+           background-color: black;
+           color: white !important;
+           &:hover {
+             transform: scale(.94);
+           }
+           p{
+            display: flex;
+            justify-content: center;
+            border-left: solid 2px white;
+            padding: 0px 15px;
+           }
+         }
+       }
+}
+
+@media (min-width: $md-breakpoint){
+  .pageNotFound-container{
+    .button-pageNotFound {
+      width: fit-content;
+    }
+    .image-container{
+       .backgroundImage{
+       height: 490px;
+       }
+     }
+     .titleImage{
+      font-size: 48px;
+     }
+     .text{
+      margin: 30px 0px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media (min-width: $lg-breakpoint){
+  .pageNotFound-container{
+    
+     .titleImage{
+      font-size: 56px;
+     }
+     .text{
+      font-size: 36px;
+    }
+  }
+}
+

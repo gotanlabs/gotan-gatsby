@@ -6,10 +6,9 @@ import CustomLink from "../CustomLink/CustomLink";
 
 
 const TextButton = ({ data }) => {
-    console.log('data', data)
     return (
         <>
-            <div className="background-textButton py-3 py-md-5">
+            <div className="background-textButton section-padding">
                 <div className="container">
                     <div className="textButton-text">
                         {data.text !== null && 

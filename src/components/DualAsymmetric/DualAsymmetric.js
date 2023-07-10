@@ -6,7 +6,7 @@ const DualAsymmetric = ({
   data: { title, image, bannerStyle, backgroundColor },
 }) => {
   return (
-    <div className={` DualAsymmetric py-3 py-md-5`}>
+    <div className={` DualAsymmetric py-5`}>
       <div
         className={`container dualContainer ${
           bannerStyle === "asymmetricImageLeft" ? "flex-row-reverse" : ""
@@ -20,7 +20,7 @@ const DualAsymmetric = ({
               : "col-6 me-2"
           } ${backgroundColor}`}
         >
-          {title !== null && <h1 className="titleDual">{title}</h1> }
+          {title !== null && <h1>{title}</h1> }
           
         </div>
         {image && (
@@ -28,7 +28,7 @@ const DualAsymmetric = ({
             className={`asymmetricImage ${
               bannerStyle === "asymmetricImageRight" ||
               bannerStyle === "asymmetricImageLeft"
-                ? "col-3"
+                ? "col-md-3"
                 : "col-6 ms-2"
             } ${bannerStyle === "asymmetricImageRight" && "ms-3"} ${bannerStyle === "asymmetricImageLeft" && "me-3"}`}
             style={{ backgroundColor: "#14D3FC" }}

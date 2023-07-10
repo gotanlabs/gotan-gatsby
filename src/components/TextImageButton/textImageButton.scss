@@ -1,0 +1,125 @@
+@import "../../styles/colors";
+@import "../../styles/text";
+@import "../../styles/global";
+
+.textImageButton-container {
+  background-color: #ccff00;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .textImageButton-image {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+
+    .image {
+      width: 100%;
+      object-fit: cover;
+      height: 250px;
+      border: 2px solid black;
+      border-radius: 16px;
+    }
+  }
+
+  .textImageButton-content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+      width: fit-content;
+
+      &:hover {
+        transform: scale(0.94);
+      }
+      .custom-link {
+        align-items: center;
+        border-radius: 10px;
+        border: black solid 2px;
+        background-color: black;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.7);
+        svg {
+          padding-left: 8px;
+        }
+      }
+      .custom-link p {
+        font-size: 20px !important;
+        color: white;
+        white-space: nowrap;
+        padding: 0px 15px;
+        margin: 0 auto;
+        border-right: white 1px solid;
+      }
+    }
+  }
+
+    h1 {
+      font-size: 36px;
+      padding: 25px 0;
+      font-family: $secondary-font;
+    }
+    p {
+      padding-bottom: 35px;
+    }
+
+}
+
+@media (min-width: $md-breakpoint) {
+  .textImageButton-container {
+    align-items: center;
+
+    .textImageButton-image {
+      height: 500px;
+      width: 50%;
+      padding-left: 30px;
+      position: relative;
+
+      .image {
+        height: 500px;
+      }
+    }
+    .textImageButton-content {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .textImageButton-container {
+    align-items: center;
+
+    .textImageButton-image {
+      height: 600px;
+      .image {
+        height: 600px;
+      }
+    }
+    .textImageButton-content {
+      padding-right: 70px;
+    }
+    h1 {
+      font-size: 48px;
+      padding-bottom: 35px;
+    }
+  }
+}

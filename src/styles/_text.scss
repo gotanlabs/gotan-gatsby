@@ -41,8 +41,18 @@ p {
   font-size: 18px;
 }
 
+h1{
+  font-size: 40px;
+  font-weight: 500;
+}
+
 h2{
   font-size: 48px;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 36px;
   font-weight: 500;
 }
 
@@ -77,10 +87,24 @@ small {
   .label-small, .label-small>* {
     font-size: 14px;
   }
+  h1 {
+    font-size: 60px;
+  }
   h2 {
     font-size: 64px;
+  }
+  h3{
+    font-size: 48px;
   }
   h4 {
     font-size: 36px;
   }
 }
+
+@media (min-width: $lg-breakpoint) {
+  h1 {
+    font-size: 72px;
+  }
+}
+
+
