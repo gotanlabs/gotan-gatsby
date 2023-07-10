@@ -21,7 +21,7 @@ const BannerSimple = ({ data }) => {
       <div className="bannerSimple-text-button">
         {(
           data.title !== null   && <h3>{data.title}
-          <span className="icon-title-bannerSimple">
+          <span className="title-bannerSimple">
                 <MdArrowOutward size={40} color="white" />
               </span>
           </h3>

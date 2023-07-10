@@ -3,8 +3,7 @@
 @import "../../styles/global";
 
 .title-bannerSimple {
-  display: flex;
-  flex-direction: row;
+
 
   svg {
     font-size: 40px;
@@ -101,7 +100,7 @@
     padding-bottom: 20px;
   }
 
-  .title-bannerSimple .icon {
+  .title-bannerSimple svg {
     font-size: 40px;
     border: solid 2px white;
     border-radius: 10px;
