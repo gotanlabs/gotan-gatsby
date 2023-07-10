@@ -9,12 +9,15 @@ const PageNotFound = () => {
   
   const data = usePageNotFound().sanityPageNotFound;
 
+  
+
   return (
-    <div className="container pageNotFound-container mb-5">
+    <>
+    {data !== null && <div className="container pageNotFound-container mb-5">
       <div className="image-container col-12">
       <div className="backgroundImage">
        {(
-          data.image.image !== null ? <SanityImage
+          data.image?.image !== null ? <SanityImage
            {...data.image.image}
           alt={`${data.image.alt}`}
          /> : <></>
@@ -37,7 +40,9 @@ const PageNotFound = () => {
                icon={<RiArrowLeftFill size={25} color="white"/>} /> : <></>
              )}
            </div>
-    </div>
+    </div>}
+    </>
+    
     );
 
 
