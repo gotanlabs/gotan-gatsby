@@ -44,7 +44,7 @@
         height: 100%;
         width: 100%;
         border-radius: 20px;
-        object-fit: cover;
+        object-fit: fill;
       }
     }
   }
@@ -71,9 +71,18 @@
 }
 
 @media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
-  .DualAsymmetric .dualContainer .titleContainer {
+  .DualAsymmetric .dualContainer {
+    .asymmetricImage {
+      display: none;
+     
+    }
+  
+  
+  .titleContainer {
     h1 {
       margin-left: 30px;
     }
+    width: 100%;
   }
+}
 }
