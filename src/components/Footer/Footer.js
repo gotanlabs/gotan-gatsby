@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="container py-4 d-flex flex-wrap test" >
           <div>
               { (
-              data.logo.image !== null ?  <SanityImage
+              data?.logo?.image !== null ?  <SanityImage
                 {...data.logo.image}
                 alt={`${data.logo.alt}`}
                 className="footer__logo"
@@ -24,7 +24,7 @@ const Footer = () => {
             )}
             {data.linkArray.length !== 0 &&
             data.linkArray.map((block) => (
-              <div className="linkArray"> 
+              <div className="linkArray linkTrue"> 
               <FooterLinkArray
                 key={block._key}
                 links={block.links}
@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="linkBlock">
           {data.linkBlock.length !== 0 &&
             data.linkBlock.map((block) => (
-              <div className="blockChild"> 
+              <div className="blockChild linkTrue"> 
               <FooterLinkBlock 
                 key={block._key}
                 links={block.links}
@@ -45,16 +45,19 @@ const Footer = () => {
             ))}
             <div className=""  >
               {data.qrCode && (
-                <a
+                <a 
                   href={data.qrCode.url}
                   title={`${data.qrCode.image.alt}`}
-                  className="py-2"
+                  className="py-2 linkTrue"
                 >
-                  <SanityImage
+                  {( data?.qrCode?.image !== null &&  <SanityImage
                     {...data.qrCode.image}
                     alt={`${data.qrCode.alt}`}
                     className="qrCode"
                   />
+
+                  )}
+                 
                 </a>
               )}
               {data.socialMediaBlock && (

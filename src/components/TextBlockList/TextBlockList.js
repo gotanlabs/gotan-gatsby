@@ -23,12 +23,12 @@ const TextBlockList = ({ title, blocks, titleTop }) => {
   ));
 
   return (
-    <div
+    <div id={`${title.replace(/\s/g, '')}`}
       className={`container section-padding  ${
         titleTop ? "textBlockListTop" : "textBlockList"
       }`}
     >
-      {title && <h2 id={`${title.replace(/\s/g, '')}`}>{title}</h2>}
+      {title && <h2 >{title}</h2>}
       <div
         className={`${
           titleTop ? "textBlockListTop__blocks" : "textBlockList__blocks"

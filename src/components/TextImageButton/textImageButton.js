@@ -35,7 +35,7 @@ const TextImageButton = ({ data }) => {
           </div>
         </div>
         <div className="textImageButton-image">
-          {data.image.image !== null ? (
+          {data?.image?.image !== null ? (
             <SanityImage
               {...data.image.image}
               alt={`${data.image.alt}`}
