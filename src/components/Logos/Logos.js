@@ -10,7 +10,7 @@ const Logos = (logos) => {
     {logos.logos.logo && logos.logos.logo.map((logo) => (
       <div className="col-6 col-md-3">
         <div className="image"> 
-        {logo.image !== null &&
+        {logo?.image !== null &&
           <SanityImage
           {...logo.image}
           alt="Logo"

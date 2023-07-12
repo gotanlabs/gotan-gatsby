@@ -20,7 +20,7 @@ const TextImageCategoryArray = ({ sections, title }) => {
           </div>
           <div className={`picture ${data.textRight}Picture  ${!data.category && 'smallerPicture'}  col-lg-6 col-md-6 col-12`}>
            
-           {data.image && <SanityImage
+           {data?.image && <SanityImage
              {...data.image.image}
              alt={`${data.image.alt}`}
             

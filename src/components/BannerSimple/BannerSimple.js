@@ -11,7 +11,7 @@ const BannerSimple = ({ data }) => {
     <div className="container bannerSimple-container mb-5">
       <div className="image-bannerSimple">
       {(
-        data.image.image !== null ? <SanityImage
+        data?.image?.image !== null && data?.image?.image !== undefined ? <SanityImage
           {...data.image.image}
           alt={`${data.image.alt}`}
           className="image-bannerSimple"

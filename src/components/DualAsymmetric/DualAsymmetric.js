@@ -23,7 +23,7 @@ const DualAsymmetric = ({
           {title !== null && <h1>{title}</h1> }
           
         </div>
-        {image && (
+        {image && image !== undefined && (
           <div
             className={`asymmetricImage ${
               bannerStyle === "asymmetricImageRight" ||
@@ -33,7 +33,7 @@ const DualAsymmetric = ({
             } ${bannerStyle === "asymmetricImageRight" && "ms-3"} ${bannerStyle === "asymmetricImageLeft" && "me-3"}`}
             style={{ backgroundColor: "#14D3FC" }}
           >
-            <SanityImage {...image.image} alt={image.alt} />
+               <SanityImage {...image?.image} alt={image.alt} />  
           </div>
         )}
         <div style={{ backgroundColor: "gray" }}></div>
