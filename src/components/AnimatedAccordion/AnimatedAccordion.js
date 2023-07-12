@@ -13,7 +13,7 @@ const AnimatedAccordion = ({ sections, summary, title }) => {
       <div className="sections">
         {sections.map((section) => (
           <div key={`section-${section.title}`} className="sectionContainer">
-            <a href={`/forCompanies/#${section.title.replace(/\s/g, '')}`} className="body-large">
+            <a href={`/forCompanies/#${section?.title.replace(/\s/g, '')}`} className="body-large">
               <div>{section.title}</div>
               <div>
                 {" "}
@@ -22,8 +22,9 @@ const AnimatedAccordion = ({ sections, summary, title }) => {
             </a>
             <div>
               {" "}
+              
               <div>
-                <PortableText value={section._rawContent} />
+              {(section?._rawContent !== null && <PortableText value={section._rawContent} /> )} 
               </div>
             </div>
           </div>

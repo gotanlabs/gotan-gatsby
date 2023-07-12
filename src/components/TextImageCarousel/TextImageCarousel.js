@@ -42,7 +42,7 @@ const TextImageCarousel = ({ slides, title }) => {
             {slides.map((slide, index) => (
               <div key={index} className="carouselContainer">
                 <div className="carouselContainer_image">
-                  {slide.image !== null && (
+                  {slide?.image !== null && (
                     <SanityImage
                       {...slide.image.image}
                       alt={`${slide.image.alt}`}
