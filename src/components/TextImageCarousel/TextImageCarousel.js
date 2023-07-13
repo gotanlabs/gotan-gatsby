@@ -30,6 +30,7 @@ const TextImageCarousel = ({ slides, title }) => {
         <div className="container">
           {title && <h4>{title}</h4>}
           <Carousel
+            interval={7000}
             showStatus={false}
             showThumbs={false}
             showIndicators={false}
@@ -40,7 +41,7 @@ const TextImageCarousel = ({ slides, title }) => {
             onChange={updateCurrentSlide}
           >
             {slides.map((slide, index) => (
-              <div key={index} className="carouselContainer">
+              <div  key={index} className="carouselContainer">
                 <div className="carouselContainer_image">
                   {slide?.image !== null && (
                     <SanityImage
