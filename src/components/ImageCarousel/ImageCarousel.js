@@ -12,7 +12,8 @@ const ImageCarousel = ({ data }) => {
       <div className="carousel-wrapper">
         {firstLineSlides.map((slide, index) => (
           <div className="carousel-slide" key={slide._key + index}>
-            <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
+            {(slide?.image !== null &&  <SanityImage {...slide.image} alt={`${slide.image.alt}`} /> )}
+           
           </div>
         ))}
       </div>
@@ -20,7 +21,7 @@ const ImageCarousel = ({ data }) => {
       <div className="carousel-wrapper wrapper-second-line">
         {secondLineSlides.map((slide, index) => (
           <div className="carousel-slide" key={slide._key + index}>
-            <SanityImage {...slide.image} alt={`${slide.image.alt}`} />
+          {(slide?.image !== null && <SanityImage {...slide.image} alt={`${slide.image.alt}`} /> )}  
           </div>
         ))}
       </div>
