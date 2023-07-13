@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     data !== null && (
-      <footer className="footer">
+      <footer className={`footer`}>
        <div className='line '></div>
         <div className="container py-4 d-flex flex-wrap test" >
           <div>
@@ -24,7 +24,7 @@ const Footer = () => {
             )}
             {data.linkArray.length !== 0 &&
             data.linkArray.map((block) => (
-              <div className="linkArray linkTrue"> 
+              <div className={`linkArray `} > 
               <FooterLinkArray
                 key={block._key}
                 links={block.links}
@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="linkBlock">
           {data.linkBlock.length !== 0 &&
             data.linkBlock.map((block) => (
-              <div className="blockChild linkTrue"> 
+              <div className={`blockChild `} > 
               <FooterLinkBlock 
                 key={block._key}
                 links={block.links}
@@ -48,7 +48,7 @@ const Footer = () => {
                 <a 
                   href={data.qrCode.url}
                   title={`${data.qrCode.image.alt}`}
-                  className="py-2 linkTrue"
+                  className="py-2"
                 >
                   {( data?.qrCode?.image !== null &&  <SanityImage
                     {...data.qrCode.image}
