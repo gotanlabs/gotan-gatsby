@@ -137,6 +137,8 @@ const useAbout = () => {
                 _rawContent
               }
             }
+            titlePage
+            descriptionPage
           }
 }
   `)

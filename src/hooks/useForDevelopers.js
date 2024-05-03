@@ -172,6 +172,7 @@ const useForDevelopers = () => {
           }
         }
         titlePage
+        descriptionPage
       }
     }
   `);

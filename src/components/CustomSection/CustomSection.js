@@ -21,8 +21,7 @@ import StringsColorsBlock from "../StringsColorsBlock/StringsColorsBlock";
 const CustomSection = ({ sections }) => {
   const [message, setMessage] = useState("");
 
-
-  const sectionResult = sections.map((section) => {
+  const sectionResult = sections?.map((section) => {
     {
       if (
         section?._type !== null &&
